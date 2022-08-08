@@ -1,24 +1,24 @@
-import logo from './logo.svg';
-import './App.css';
+import "./app.scss";
+import { Content, Theme } from "@carbon/react";
+import MainHeader from "./components/Header/MainHeader";
+import { Route, Routes } from "react-router-dom";
+import LandingPage from "./pages/LandingPage";
+import ProjectPage from "./pages/ProjectPage";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <Theme theme="g100">
+        <MainHeader />
+      </Theme>
+      <Content>
+        <Routes>
+          <Route path="/" element={<LandingPage />} />
+          <Route path="/projects" element={<ProjectPage />} />
+          {/* <Route path="/about" element={<AboutPage />} /> */}
+        </Routes>
+      </Content>
+    </>
   );
 }
 
