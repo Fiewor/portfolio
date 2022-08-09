@@ -15,9 +15,16 @@ import {
   StructuredListRow,
   StructuredListCell,
   StructuredListBody,
+  Link as CarbonLink,
 } from "@carbon/react";
 import { Link } from "react-router-dom";
-import { LogoGithub, LogoLinkedin, LogoTwitter } from "@carbon/react/icons";
+import {
+  LogoGithub,
+  LogoLinkedin,
+  LogoTwitter,
+  LogoDiscord,
+  Launch,
+} from "@carbon/react/icons";
 
 const LandingPage = () => {
   return (
@@ -88,10 +95,16 @@ const LandingPage = () => {
                             </StructuredListCell>
                             <StructuredListCell>
                               I was part of an international, diverse team that
-                              built ''Good News'' app a web app showing positive
+                              built 'Good News' app - a web app showing positive
                               news from all over the world. This submission won
                               us the 2nd place out of over 600 participants
-                              worldwide. See: https://bit.ly/3bZwbOI
+                              worldwide. See{" "}
+                              <CarbonLink
+                                href="https://bit.ly/3bZwbOI"
+                                renderIcon={Launch}
+                              >
+                                here
+                              </CarbonLink>
                             </StructuredListCell>
                           </StructuredListRow>
                           <StructuredListRow>
@@ -103,8 +116,13 @@ const LandingPage = () => {
                               I'm currently a contributor to IBM's Call for Code
                               for Racial Justice Open Source Projects including
                               the Truth Loop project and I mostly contribute in
-                              areas of i18n and a11y. See:
-                              https://bit.ly/3IA8QPW
+                              areas of i18n and a11y. See{" "}
+                              <CarbonLink
+                                href="https://bit.ly/3IA8QPW"
+                                renderIcon={Launch}
+                              >
+                                here
+                              </CarbonLink>
                             </StructuredListCell>
                           </StructuredListRow>
                         </StructuredListBody>
@@ -165,7 +183,7 @@ const LandingPage = () => {
       </Column>
       <Column lg={16} md={8} sm={4} className="landing-page__r3">
         <Grid>
-          <Column md={4} lg={4} sm={4}>
+          <Column md={2} lg={4} sm={2}>
             <h3 className="landing-page__label">
               <Column md={8} lg={16} sm={4}>
                 React + IBM Carbon = ❤️
@@ -175,20 +193,39 @@ const LandingPage = () => {
               </Column>
             </h3>
           </Column>
-          <Column md={4} lg={4} sm={4}>
-            <Column md={8} lg={16} sm={4}>
+
+          <Column md={2} lg={4} sm={2} className="no-padding">
+            <Column md={8} lg={4} sm={4} className="landing-page__social_title">
               Social
             </Column>
-            <Column md={8} lg={16} sm={4} className="landing-page__social">
-              <LogoGithub size={24} />
-              <LogoLinkedin size={24} />
-              <LogoTwitter size={24} />
+            <Column
+              md={4}
+              lg={16}
+              sm={4}
+              className="landing-page__social_links"
+            >
+              <Grid className="social__subgrid">
+                <Column md={2} lg={4} sm={2}>
+                  <LogoGithub size={24} />
+                </Column>
+                <Column md={2} lg={4} sm={2}>
+                  <LogoLinkedin size={24} />
+                </Column>
+                <Column md={2} lg={4} sm={2}>
+                  <LogoTwitter size={24} />
+                </Column>
+                <Column md={2} lg={4} sm={2}>
+                  <LogoDiscord size={24} />
+                </Column>
+              </Grid>
             </Column>
           </Column>
-          <Column md={4} lg={4} sm={4}>
+
+          <Column md={2} lg={4} sm={2}>
             Projects
           </Column>
-          <Column md={4} lg={4} sm={4}>
+
+          <Column md={2} lg={4} sm={2}>
             Blog
           </Column>
         </Grid>
