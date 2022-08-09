@@ -13,7 +13,7 @@ import {
   SideNavItems,
   HeaderSideNavItems,
 } from "@carbon/react";
-import { Switcher, Notification, UserAvatar } from "@carbon/react/icons";
+import { LogoGithub, Home, UserAvatar } from "@carbon/react/icons";
 import { Link } from "react-router-dom";
 
 const MainHeader = () => (
@@ -26,7 +26,7 @@ const MainHeader = () => (
           onClick={onClickSideNavExpand}
           isActive={isSideNavExpanded}
         />
-        <HeaderName element={Link} to="/" prefix="John">
+        <HeaderName element={Link} to="/" prefix="">
           Fiewor
         </HeaderName>
         <HeaderNavigation aria-label="Carbon Main">
@@ -54,20 +54,11 @@ const MainHeader = () => (
           </SideNavItems>
         </SideNav>
         <HeaderGlobalBar>
-          <HeaderGlobalAction
-            aria-label="Notifications"
-            tooltipAlignment="center"
-          >
-            <Notification size={20} />
+          <HeaderGlobalAction aria-label="Home" tooltipAlignment="center">
+            <Home size={20} />
           </HeaderGlobalAction>
-          <HeaderGlobalAction
-            aria-label="User Avatar"
-            tooltipAlignment="center"
-          >
-            <UserAvatar size={20} />
-          </HeaderGlobalAction>
-          <HeaderGlobalAction aria-label="App Switcher" tooltipAlignment="end">
-            <Switcher size={20} />
+          <HeaderGlobalAction aria-label="Github" tooltipAlignment="end">
+            <LogoGithub size={20} />
           </HeaderGlobalAction>
         </HeaderGlobalBar>
       </Header>
