@@ -76,7 +76,10 @@ $html-font-size: 16px;
   }
 }
 
-.landing-page__social_list {
-  margin-left: 0px;
-  margin-right: 0px;
+.landing-page__nested {
+  margin: 0;
+}
+
+.landing-page__social_title {
+  padding-bottom: $spacing-02;
 }

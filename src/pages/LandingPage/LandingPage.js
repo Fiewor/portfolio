@@ -183,9 +183,14 @@ const LandingPage = () => {
       </Column>
       <Column lg={16} md={8} sm={4} className="landing-page__r3">
         <Grid>
-          <Column md={2} lg={4} sm={2}>
+          <Column md={2} lg={4} sm={2} className="landing-page__nested">
             <h3 className="landing-page__label">
-              <Column md={8} lg={16} sm={4}>
+              <Column
+                md={8}
+                lg={16}
+                sm={4}
+                className="landing-page__social_title"
+              >
                 React + IBM Carbon = ❤️
               </Column>
               <Column md={8} lg={16} sm={4}>
@@ -194,7 +199,7 @@ const LandingPage = () => {
             </h3>
           </Column>
 
-          <Column md={2} lg={4} sm={2} className="no-padding">
+          <Column md={2} lg={4} sm={2} className="landing-page__nested">
             <Column md={8} lg={4} sm={4} className="landing-page__social_title">
               Social
             </Column>
