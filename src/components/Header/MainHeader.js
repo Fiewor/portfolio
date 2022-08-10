@@ -33,9 +33,6 @@ const MainHeader = () => (
           <HeaderMenuItem element={Link} to="/projects">
             Projects
           </HeaderMenuItem>
-          <HeaderMenuItem element={Link} to="/about">
-            About
-          </HeaderMenuItem>
         </HeaderNavigation>
         <SideNav
           aria-label="Side navigation"
@@ -47,15 +44,12 @@ const MainHeader = () => (
               <HeaderMenuItem element={Link} to="/projects">
                 Projects
               </HeaderMenuItem>
-              <HeaderMenuItem element={Link} to="/">
-                About
-              </HeaderMenuItem>
             </HeaderSideNavItems>
           </SideNavItems>
         </SideNav>
         <HeaderGlobalBar>
           <HeaderGlobalAction aria-label="Home" tooltipAlignment="center">
-            <Home size={20} />
+            <Home size={20} element={Link} to="/" />
           </HeaderGlobalAction>
           <HeaderGlobalAction aria-label="Github" tooltipAlignment="end">
             <LogoGithub size={20} />

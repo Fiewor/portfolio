@@ -58,9 +58,16 @@ const LandingPage = () => {
                     >
                       <h2 className="landing-page__subheading">Hi there,</h2>
                       <p className="landing-page__p">
-                        My name is John Fiewor and I'm a MERN-Stack Developer.
+                        my name is <span>John Fiewor</span> and I'm a MERN-Stack
+                        Developer.
                       </p>
-                      <Button>Read more</Button>
+                      <Button
+                        renderIcon={Launch}
+                        href="https://github.com/Fiewor"
+                        target="_blank"
+                      >
+                        Read more
+                      </Button>
                     </Column>
                     {/* <Column md={4} lg={{ span: 8, offset: 7 }} sm={4}>
                       <img
@@ -82,7 +89,9 @@ const LandingPage = () => {
                       <StructuredListWrapper>
                         <StructuredListHead>
                           <StructuredListRow head>
-                            <StructuredListCell head>Role</StructuredListCell>
+                            <StructuredListCell head>
+                              Achievement
+                            </StructuredListCell>
                             <StructuredListCell head>
                               Details
                             </StructuredListCell>
@@ -94,16 +103,31 @@ const LandingPage = () => {
                               MongoDB World Hackathon 2nd Place Winner
                             </StructuredListCell>
                             <StructuredListCell>
-                              I was part of an international, diverse team that
-                              built 'Good News' app - a web app showing positive
-                              news from all over the world. This submission won
-                              us the 2nd place out of over 600 participants
-                              worldwide. See{" "}
+                              Together with{" "}
+                              <CarbonLink
+                                href="https://github.com"
+                                target="_blank"
+                              >
+                                Avik Singha
+                              </CarbonLink>{" "}
+                              and{" "}
+                              <CarbonLink
+                                href="https://github.com"
+                                target="_blank"
+                              >
+                                Sucheta Sahid
+                              </CarbonLink>
+                              {", "}I built 'Good News' - a web app showcasing
+                              positive news from all over the world using the
+                              GDELT dataset. This submission won us 2nd place
+                              out of over 600 participants in the virtual,
+                              worldwide hackathon. See{" "}
                               <CarbonLink
                                 href="https://bit.ly/3bZwbOI"
+                                target="_blank"
                                 renderIcon={Launch}
                               >
-                                here
+                                more
                               </CarbonLink>
                             </StructuredListCell>
                           </StructuredListRow>
@@ -113,15 +137,23 @@ const LandingPage = () => {
                               Racial Justice
                             </StructuredListCell>
                             <StructuredListCell>
-                              I'm currently a contributor to IBM's Call for Code
-                              for Racial Justice Open Source Projects including
-                              the Truth Loop project and I mostly contribute in
-                              areas of i18n and a11y. See{" "}
+                              Contributor to{" "}
+                              <CarbonLink
+                                href="https://ibmcallforcode.com"
+                                target="_blank"
+                              >
+                                IBM's Call for Code for Racial Justice Open
+                                Source Projects
+                              </CarbonLink>{" "}
+                              including the Truth Loop project mostly
+                              contributing in areas of i18n and a11y. Was also a
+                              demo day speaker during Hacktoberfest 2021. See{" "}
                               <CarbonLink
                                 href="https://bit.ly/3IA8QPW"
+                                target="_blank"
                                 renderIcon={Launch}
                               >
-                                here
+                                more
                               </CarbonLink>
                             </StructuredListCell>
                           </StructuredListRow>
@@ -150,19 +182,30 @@ const LandingPage = () => {
                         <StructuredListBody>
                           <StructuredListRow>
                             <StructuredListCell>
-                              Frontend Developer - HelloHub
+                              Frontend Developer -{" "}
+                              <span className="landing-page__cell-span">
+                                HelloHub
+                              </span>
                             </StructuredListCell>
-                            <StructuredListCell>
-                              Working on the frontend of HelloHub's suite of
-                              applications along with an international remote
-                              team. Technologies: MVVM Architectural Pattern,
-                              React, TypeScript, JavaScript, Styled components,
-                              React Testing Library, Jest, Storybook.js.
+                            <StructuredListCell className="landing-page__cell">
+                              <Column lg={16} md={8} sm={4}>
+                                Working on the frontend of HelloHub's suite of
+                                applications along with an international remote
+                                team.
+                              </Column>
+                              <Column lg={16} md={8} sm={4}>
+                                Technologies: MVVM Architectural Pattern, React,
+                                TypeScript, JavaScript, Styled components, React
+                                Testing Library, Jest, Storybook.js.
+                              </Column>
                             </StructuredListCell>
                           </StructuredListRow>
                           <StructuredListRow>
                             <StructuredListCell>
-                              Frontend Web Development Intern
+                              Frontend Web Development Intern -{" "}
+                              <span className="landing-page__cell-span">
+                                Zuri
+                              </span>
                             </StructuredListCell>
                             <StructuredListCell>
                               Used HTML, CSS, Bootstrap, JS, Gulp and
@@ -173,6 +216,7 @@ const LandingPage = () => {
                           </StructuredListRow>
                         </StructuredListBody>
                       </StructuredListWrapper>
+                      <Button renderIcon={Launch}>Download Resume</Button>
                     </Column>
                   </Grid>
                 </TabPanel>
@@ -191,7 +235,7 @@ const LandingPage = () => {
                 sm={4}
                 className="landing-page__social_title"
               >
-                React + IBM Carbon = ❤️
+                React + IBM Carbon + ❤️
               </Column>
               <Column md={8} lg={16} sm={4}>
                 &copy; {new Date().getFullYear()}
@@ -200,9 +244,6 @@ const LandingPage = () => {
           </Column>
 
           <Column md={2} lg={4} sm={2} className="landing-page__nested">
-            <Column md={8} lg={4} sm={4} className="landing-page__social_title">
-              Social
-            </Column>
             <Column
               md={4}
               lg={16}
@@ -219,7 +260,7 @@ const LandingPage = () => {
                 <Column md={2} lg={4} sm={2}>
                   <LogoTwitter size={24} />
                 </Column>
-                <Column md={2} lg={4} sm={2}>
+                <Column md={2} lg={4} sm={2} href="https://discord.com">
                   <LogoDiscord size={24} />
                 </Column>
               </Grid>
@@ -227,11 +268,15 @@ const LandingPage = () => {
           </Column>
 
           <Column md={2} lg={4} sm={2}>
-            Projects
+            <Link to="/projects" className="landing-page__footer">
+              Projects
+            </Link>
           </Column>
 
           <Column md={2} lg={4} sm={2}>
-            Blog
+            <Link to="/about" className="landing-page__footer">
+              About
+            </Link>
           </Column>
         </Grid>
       </Column>
