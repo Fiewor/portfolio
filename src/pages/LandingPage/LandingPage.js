@@ -24,9 +24,14 @@ import {
   LogoTwitter,
   LogoDiscord,
   Launch,
+  DocumentDownload,
 } from "@carbon/react/icons";
+import downloadResume from "./downloadResume.js";
 
 const LandingPage = () => {
+  const url =
+    "https://drive.google.com/file/d/1lrp9v4lH5gUGu0f1DLjO6xxt67qb8PGZ/view?usp=sharing";
+
   return (
     <Grid className="landing-page" fullWidth>
       <Column lg={16} md={8} sm={4} className="landing-page__banner">
@@ -65,6 +70,7 @@ const LandingPage = () => {
                         renderIcon={Launch}
                         href="https://github.com/Fiewor"
                         target="_blank"
+                        rel="noopener noreferrer"
                       >
                         Read more
                       </Button>
@@ -107,6 +113,7 @@ const LandingPage = () => {
                               <CarbonLink
                                 href="https://github.com"
                                 target="_blank"
+                                rel="noopener noreferrer"
                               >
                                 Avik Singha
                               </CarbonLink>{" "}
@@ -114,6 +121,7 @@ const LandingPage = () => {
                               <CarbonLink
                                 href="https://github.com"
                                 target="_blank"
+                                rel="noopener noreferrer"
                               >
                                 Sucheta Sahid
                               </CarbonLink>
@@ -125,6 +133,7 @@ const LandingPage = () => {
                               <CarbonLink
                                 href="https://bit.ly/3bZwbOI"
                                 target="_blank"
+                                rel="noopener noreferrer"
                                 renderIcon={Launch}
                               >
                                 more
@@ -141,6 +150,7 @@ const LandingPage = () => {
                               <CarbonLink
                                 href="https://ibmcallforcode.com"
                                 target="_blank"
+                                rel="noopener noreferrer"
                               >
                                 IBM's Call for Code for Racial Justice Open
                                 Source Projects
@@ -151,6 +161,7 @@ const LandingPage = () => {
                               <CarbonLink
                                 href="https://bit.ly/3IA8QPW"
                                 target="_blank"
+                                rel="noopener noreferrer"
                                 renderIcon={Launch}
                               >
                                 more
@@ -216,7 +227,12 @@ const LandingPage = () => {
                           </StructuredListRow>
                         </StructuredListBody>
                       </StructuredListWrapper>
-                      <Button renderIcon={Launch}>Download Resume</Button>
+                      <Button
+                        renderIcon={DocumentDownload}
+                        onClick={downloadResume(url, "john_resume")}
+                      >
+                        Download Resume
+                      </Button>
                     </Column>
                   </Grid>
                 </TabPanel>
