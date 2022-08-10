@@ -148,7 +148,7 @@ const LandingPage = () => {
                             <StructuredListCell>
                               Contributor to{" "}
                               <CarbonLink
-                                href="https://ibmcallforcode.com"
+                                href="https://developer.ibm.com/callforcode/racial-justice/"
                                 target="_blank"
                                 rel="noopener noreferrer"
                               >
@@ -229,7 +229,7 @@ const LandingPage = () => {
                       </StructuredListWrapper>
                       <Button
                         renderIcon={DocumentDownload}
-                        onClick={downloadResume(url, "john_resume")}
+                        onClick={() => downloadResume(url, "john_resume")}
                       >
                         Download Resume
                       </Button>
