@@ -111,7 +111,7 @@ const LandingPage = () => {
                             <StructuredListCell>
                               Together with{" "}
                               <CarbonLink
-                                href="https://github.com"
+                                href="https://github.com/avik-singha/"
                                 target="_blank"
                                 rel="noopener noreferrer"
                               >
@@ -119,11 +119,11 @@ const LandingPage = () => {
                               </CarbonLink>{" "}
                               and{" "}
                               <CarbonLink
-                                href="https://github.com"
+                                href="https://github.com/sucheta21"
                                 target="_blank"
                                 rel="noopener noreferrer"
                               >
-                                Sucheta Sahid
+                                Sucheta Singa
                               </CarbonLink>
                               {", "}I built 'Good News' - a web app showcasing
                               positive news from all over the world using the
