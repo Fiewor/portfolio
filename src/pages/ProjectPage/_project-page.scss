@@ -21,7 +21,7 @@
 }
 
 .project-tile-image {
-  cursor: pointer;
+  // cursor: pointer;
   width: 600px;
   height: 300px;
   @include breakpoint-down(md) {
@@ -36,7 +36,7 @@
 .project-tile__column {
   // justify-self: center;
   padding: $spacing-02;
-  padding-bottom: $spacing-10;
+  padding-bottom: $spacing-08;
   @include breakpoint-down(md) {
     padding-bottom: $spacing-05;
   }
