@@ -32,6 +32,10 @@ const LandingPage = () => {
   const url =
     "https://drive.google.com/file/d/1lrp9v4lH5gUGu0f1DLjO6xxt67qb8PGZ/view?usp=sharing";
 
+  const definition = {
+    mern: "a MERN stack developer is someone who specializes in using MongoDB, Express, React and Nodejs to build fullstack web applications.",
+  };
+
   return (
     <Grid className="landing-page" fullWidth>
       <Column lg={16} md={8} sm={4} className="landing-page__banner">
@@ -63,8 +67,11 @@ const LandingPage = () => {
                     >
                       <h2 className="landing-page__subheading">Hi there,</h2>
                       <p className="landing-page__p">
-                        my name is <span>John Fiewor</span> and I'm a MERN-Stack
-                        Developer.
+                        my name is{" "}
+                        <span className="landing-page__p__span">
+                          John Fiewor
+                        </span>{" "}
+                        and I'm a MERN-Stack developer.
                       </p>
                       <Button
                         renderIcon={Launch}
@@ -275,18 +282,46 @@ const LandingPage = () => {
               sm={4}
               className="landing-page__social_links"
             >
-              <Grid className="social__subgrid">
+              <Grid className="social-subgrid">
                 <Column md={2} lg={4} sm={2}>
-                  <LogoGithub size={24} />
+                  <a
+                    className="social-subgrid__icon-container"
+                    href="https://github.com/Fiewor"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <LogoGithub size={24} />
+                  </a>
                 </Column>
                 <Column md={2} lg={4} sm={2}>
-                  <LogoLinkedin size={24} />
+                  <a
+                    className="social-subgrid__icon-container"
+                    href="https://www.linkedin.com/in/john-fiewor-365484127/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <LogoLinkedin size={24} />
+                  </a>
                 </Column>
                 <Column md={2} lg={4} sm={2}>
-                  <LogoTwitter size={24} />
+                  <a
+                    className="social-subgrid__icon-container"
+                    href="https://twitter.com/the21st_pilot"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <LogoTwitter size={24} />
+                  </a>
                 </Column>
                 <Column md={2} lg={4} sm={2} href="https://discord.com">
-                  <LogoDiscord size={24} />
+                  <a
+                    className="social-subgrid__icon-container"
+                    href="https://discord.com"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <LogoDiscord size={24} />
+                  </a>
                 </Column>
               </Grid>
             </Column>
