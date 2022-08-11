@@ -1,5 +1,6 @@
 @use "@carbon/react/scss/spacing" as *;
 @use "@carbon/react/scss/breakpoint" as *;
+@use "@carbon/react/scss/type" as *;
 
 .project-page__r1 {
   padding-top: $spacing-05;
@@ -14,7 +15,9 @@
 }
 
 .project-tile__title {
-  padding-bottom: $spacing-02;
+  padding-right: $spacing-06;
+
+  @include type-style("heading-compact-02");
 }
 
 .project-tile-image {
@@ -31,8 +34,12 @@
 }
 
 .project-tile__column {
-  justify-self: center;
+  // justify-self: center;
   padding: $spacing-02;
+  padding-bottom: $spacing-10;
+  @include breakpoint-down(md) {
+    padding-bottom: $spacing-05;
+  }
 }
 
 .project-tile__grid {
@@ -40,6 +47,19 @@
 }
 
 .project-button {
-  margin-left: $spacing-09;
+  margin-left: $spacing-08;
   margin-bottom: $spacing-03;
+}
+
+.project-tile__header {
+  padding: $spacing-03 0;
+}
+
+.project-tile__description {
+  padding-bottom: $spacing-03;
+  @include type-style("body-compact-01");
+}
+
+.project-tile__tag-container {
+  margin: $spacing-01 0;
 }
