@@ -186,6 +186,9 @@ const LandingPage = () => {
                           <StructuredListRow head>
                             <StructuredListCell head>Role</StructuredListCell>
                             <StructuredListCell head>
+                              Company | Timeline
+                            </StructuredListCell>
+                            <StructuredListCell head>
                               Description
                             </StructuredListCell>
                           </StructuredListRow>
@@ -193,10 +196,13 @@ const LandingPage = () => {
                         <StructuredListBody>
                           <StructuredListRow>
                             <StructuredListCell>
-                              Frontend Developer -{" "}
+                              Frontend Developer
+                            </StructuredListCell>
+                            <StructuredListCell>
                               <span className="landing-page__cell-span">
-                                HelloHub
+                                HelloHub{" "}
                               </span>
+                              | 02.2022 - Present
                             </StructuredListCell>
                             <StructuredListCell className="landing-page__cell">
                               <Column lg={16} md={8} sm={4}>
@@ -213,10 +219,13 @@ const LandingPage = () => {
                           </StructuredListRow>
                           <StructuredListRow>
                             <StructuredListCell>
-                              Frontend Web Development Intern -{" "}
+                              Frontend Web Development Intern
+                            </StructuredListCell>
+                            <StructuredListCell>
                               <span className="landing-page__cell-span">
-                                Zuri
+                                Zuri{" "}
                               </span>
+                              | 03.2021 - 07.2021
                             </StructuredListCell>
                             <StructuredListCell>
                               Used HTML, CSS, Bootstrap, JS, Gulp and
