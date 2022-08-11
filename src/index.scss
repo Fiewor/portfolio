@@ -1,6 +1,7 @@
-@use "@carbon/react";
-@use "@carbon/react/scss/colors";
-@use "@carbon/react/scss/breakpoint" as *;
+@use "~@carbon/react";
+@use "~@carbon/react/scss/colors";
+@use "~@carbon/react/scss/breakpoint" as *;
+// @use "../node_modules/@carbon/react/scss/breakpoint" as *;
 
 .cds--content {
   margin-top: 3rem;
