@@ -85,7 +85,7 @@ const ProjectPage = () => {
         )}
       </Grid>
       <Button
-        href="https://github.com/Fiewor"
+        href="https://github.com/Fiewor/repositories"
         target="_blank"
         rel="noopener noreferrer"
         className="project-button"
