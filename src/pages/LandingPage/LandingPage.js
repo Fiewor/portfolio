@@ -32,6 +32,7 @@ const LandingPage = () => {
   const url =
     "https://drive.google.com/file/d/1lrp9v4lH5gUGu0f1DLjO6xxt67qb8PGZ/view?usp=sharing";
 
+  // * to be used for tooltip definition
   const definition = {
     mern: "a MERN stack developer is someone who specializes in using MongoDB, Express, React and Nodejs to build fullstack web applications.",
   };
@@ -55,6 +56,7 @@ const LandingPage = () => {
                 <Tab>Intro</Tab>
                 <Tab>Achievements</Tab>
                 <Tab>Experience</Tab>
+                <Tab>Certificates</Tab>
               </TabList>
               <TabPanels>
                 <TabPanel>
@@ -91,6 +93,7 @@ const LandingPage = () => {
                     </Column> */}
                   </Grid>
                 </TabPanel>
+
                 <TabPanel>
                   <Grid className="tabs-group-content">
                     <Column
@@ -252,11 +255,125 @@ const LandingPage = () => {
                     </Column>
                   </Grid>
                 </TabPanel>
+                <TabPanel>
+                  <Grid className="tabs-group-content">
+                    <Column
+                      lg={16}
+                      md={8}
+                      sm={4}
+                      className="landing-page__tab-content"
+                    >
+                      <StructuredListWrapper>
+                        <StructuredListHead>
+                          <StructuredListRow head>
+                            <StructuredListCell head>
+                              Certificate
+                            </StructuredListCell>
+                            <StructuredListCell head>
+                              Timeline
+                            </StructuredListCell>
+                            <StructuredListCell head>Link</StructuredListCell>
+                          </StructuredListRow>
+                        </StructuredListHead>
+                        <StructuredListBody>
+                          <StructuredListRow>
+                            <StructuredListCell>
+                              Microsoft Azure AI Engineer Associate
+                            </StructuredListCell>
+                            <StructuredListCell>
+                              09/2021 - 09/2022
+                            </StructuredListCell>
+                            <StructuredListCell>
+                              <CarbonLink
+                                href="https://bit.ly/3ljwncE"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                              >
+                                https://bit.ly/3ljwncE
+                              </CarbonLink>
+                            </StructuredListCell>
+                          </StructuredListRow>
+                          <StructuredListRow>
+                            <StructuredListCell>
+                              IBM Carbon Design System Developer Essentials -
+                              React
+                            </StructuredListCell>
+                            <StructuredListCell>
+                              10/2021 - Present
+                            </StructuredListCell>
+                            <StructuredListCell>
+                              <CarbonLink
+                                href="https://bit.ly/3Fbv8oW"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                              >
+                                https://bit.ly/3Fbv8oW
+                              </CarbonLink>
+                            </StructuredListCell>
+                          </StructuredListRow>
+                          <StructuredListRow>
+                            <StructuredListCell>
+                              freeCodeCamp Responsive Web Design Certiﬁcate
+                            </StructuredListCell>
+                            <StructuredListCell>
+                              11/2020 - Present
+                            </StructuredListCell>
+                            <StructuredListCell>
+                              <CarbonLink
+                                href="https://bit.ly/3C4UL8I"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                              >
+                                https://bit.ly/3C4UL8I
+                              </CarbonLink>
+                            </StructuredListCell>
+                          </StructuredListRow>
+                          <StructuredListRow>
+                            <StructuredListCell>
+                              IBM - Introduction to Open Source
+                            </StructuredListCell>
+                            <StructuredListCell>
+                              06/2021 - Present
+                            </StructuredListCell>
+                            <StructuredListCell>
+                              <CarbonLink
+                                href="https://bit.ly/3C7oON8"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                              >
+                                https://bit.ly/3C7oON8
+                              </CarbonLink>
+                            </StructuredListCell>
+                          </StructuredListRow>
+                          <StructuredListRow>
+                            <StructuredListCell>
+                              Google Cloud - Certiﬁcate of Course Completion
+                            </StructuredListCell>
+                            <StructuredListCell>
+                              02/2021 - Present
+                            </StructuredListCell>
+                            <StructuredListCell>
+                              <CarbonLink
+                                href="https://bit.ly/2YT7hKf"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                              >
+                                https://bit.ly/2YT7hKf
+                              </CarbonLink>
+                            </StructuredListCell>
+                          </StructuredListRow>
+                        </StructuredListBody>
+                      </StructuredListWrapper>
+                    </Column>
+                  </Grid>
+                </TabPanel>
               </TabPanels>
             </Tabs>
           </Column>
         </Grid>
       </Column>
+
+      {/* isolate to footer component */}
       <Column lg={16} md={8} sm={4} className="landing-page__r3">
         <Grid>
           <Column md={2} lg={4} sm={2} className="landing-page__nested">
