@@ -56,20 +56,8 @@ $html-font-size: 16px;
   @include type-style("productive-heading-04");
 }
 
-.landing-page__r3 {
-  padding-top: $spacing-09;
-  padding-bottom: $spacing-09;
-  padding-left: $spacing-06;
-  @include landing-page-background;
-}
-
-.landing-page__label {
-  @include type-style("heading-01");
-}
-
 .landing-page__banner,
-.landing-page__r2,
-.landing-page__r3 {
+.landing-page__r2 {
   margin-left: -20px;
   margin-right: -20px;
 
@@ -79,27 +67,11 @@ $html-font-size: 16px;
   }
 }
 
-.landing-page__nested {
-  margin: 0;
-}
-
-.landing-page__social_title {
-  padding-bottom: $spacing-02;
-}
-
 .landing-page__cell-span {
   @include type-style("productive-heading-01");
-}
-
-.landing-page__footer {
-  text-decoration: none;
 }
 
 .landing-page__cell > * {
   padding: 0;
   margin: 0;
-}
-
-.social-subgrid__icon-container {
-  color: black;
 }

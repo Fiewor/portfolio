@@ -18,14 +18,8 @@ import {
   Link as CarbonLink,
 } from "@carbon/react";
 import { Link } from "react-router-dom";
-import {
-  LogoGithub,
-  LogoLinkedin,
-  LogoTwitter,
-  LogoDiscord,
-  Launch,
-  DocumentDownload,
-} from "@carbon/react/icons";
+import { Launch, DocumentDownload } from "@carbon/react/icons";
+
 import downloadResume from "./downloadResume.js";
 
 const LandingPage = () => {
@@ -369,91 +363,6 @@ const LandingPage = () => {
                 </TabPanel>
               </TabPanels>
             </Tabs>
-          </Column>
-        </Grid>
-      </Column>
-
-      {/* isolate to footer component */}
-      <Column lg={16} md={8} sm={4} className="landing-page__r3">
-        <Grid>
-          <Column md={2} lg={4} sm={2} className="landing-page__nested">
-            <h3 className="landing-page__label">
-              <Column
-                md={8}
-                lg={16}
-                sm={4}
-                className="landing-page__social_title"
-              >
-                React + IBM Carbon + ❤️
-              </Column>
-              <Column md={8} lg={16} sm={4}>
-                &copy; {new Date().getFullYear()}
-              </Column>
-            </h3>
-          </Column>
-
-          <Column md={2} lg={4} sm={2} className="landing-page__nested">
-            <Column
-              md={4}
-              lg={16}
-              sm={4}
-              className="landing-page__social_links"
-            >
-              <Grid className="social-subgrid">
-                <Column md={2} lg={4} sm={2}>
-                  <a
-                    className="social-subgrid__icon-container"
-                    href="https://github.com/Fiewor"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    <LogoGithub size={24} />
-                  </a>
-                </Column>
-                <Column md={2} lg={4} sm={2}>
-                  <a
-                    className="social-subgrid__icon-container"
-                    href="https://www.linkedin.com/in/john-fiewor-365484127/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    <LogoLinkedin size={24} />
-                  </a>
-                </Column>
-                <Column md={2} lg={4} sm={2}>
-                  <a
-                    className="social-subgrid__icon-container"
-                    href="https://twitter.com/the21st_pilot"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    <LogoTwitter size={24} />
-                  </a>
-                </Column>
-                <Column md={2} lg={4} sm={2} href="https://discord.com">
-                  <a
-                    className="social-subgrid__icon-container"
-                    href="https://discord.com"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    <LogoDiscord size={24} />
-                  </a>
-                </Column>
-              </Grid>
-            </Column>
-          </Column>
-
-          <Column md={2} lg={4} sm={2}>
-            <Link to="/projects" className="landing-page__footer">
-              Projects
-            </Link>
-          </Column>
-
-          <Column md={2} lg={4} sm={2}>
-            <Link to="/about" className="landing-page__footer">
-              About
-            </Link>
           </Column>
         </Grid>
       </Column>

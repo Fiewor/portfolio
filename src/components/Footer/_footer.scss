@@ -1,0 +1,40 @@
+@use "@carbon/react/scss/spacing" as *;
+@use "@carbon/react/scss/type" as *;
+@use "@carbon/react/scss/breakpoint" as *;
+@use "@carbon/react/scss/theme" as *;
+@use "./mixins.scss" as *;
+
+.footer {
+  padding-top: $spacing-02;
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.footer__column {
+  padding-top: $spacing-09;
+  padding-bottom: $spacing-09;
+  padding-left: $spacing-06;
+  margin-left: 0;
+  margin-right: 0;
+  @include landing-page-background;
+}
+
+.footer__label {
+  @include type-style("heading-01");
+}
+
+.footer__nested {
+  margin: 0;
+}
+
+.footer__social_title {
+  padding-bottom: $spacing-02;
+}
+
+.social-subgrid__icon-container {
+  color: black;
+}
+
+.footer__link {
+  text-decoration: none;
+}
