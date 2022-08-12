@@ -1,0 +1,7 @@
+@use "@carbon/react/scss/spacing" as *;
+@use "@carbon/react/scss/type" as *;
+
+.about-page__p {
+  padding: $spacing-10 0;
+  margin: $spacing-13 0;
+}
