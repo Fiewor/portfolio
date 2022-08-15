@@ -14,14 +14,17 @@
     "react-dom": "^18.2.0",
     "react-router-dom": "6",
     "react-scripts": "5.0.1",
-    "sass": "1.51.0",
-    "web-vitals": "^2.1.4"
+    "sass": "^1.54.4",
+    "sass-loader": "^13.0.2",
+    "web-vitals": "^2.1.4",
+    "webpack": "^5.74.0"
   },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "sass": "sass src/app.sass:src/app.css --watch --no-source-map"
   },
   "eslintConfig": {
     "extends": [
