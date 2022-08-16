@@ -49,10 +49,19 @@ const MainHeader = () => (
         </SideNav>
         <HeaderGlobalBar>
           <HeaderGlobalAction aria-label="Home" tooltipAlignment="center">
-            <Home size={20} element={Link} to="/" />
+            <Link to="/">
+              <Home size={20} element={Link} to="/" />
+            </Link>
           </HeaderGlobalAction>
           <HeaderGlobalAction aria-label="Github" tooltipAlignment="end">
-            <LogoGithub size={20} />
+            <a
+              className="social-subgrid__icon-container"
+              href="https://github.com/Fiewor"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <LogoGithub size={20} />
+            </a>
           </HeaderGlobalAction>
         </HeaderGlobalBar>
       </Header>
