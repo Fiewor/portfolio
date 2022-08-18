@@ -215,9 +215,12 @@ const LandingPage = () => {
                                 team.
                               </Column>
                               <Column lg={16} md={8} sm={4}>
-                                Technologies: MVVM Architectural Pattern, React,
-                                TypeScript, JavaScript, Styled components, React
-                                Testing Library, Jest, Storybook.js.
+                                <span className="landing-page__cell-span">
+                                  Technologies:
+                                </span>{" "}
+                                MVVM Architectural Pattern, React, TypeScript,
+                                JavaScript, Styled components, React Testing
+                                Library, Jest, Storybook.js.
                               </Column>
                             </StructuredListCell>
                           </StructuredListRow>
@@ -232,10 +235,10 @@ const LandingPage = () => {
                               | 03.2021 - 07.2021
                             </StructuredListCell>
                             <StructuredListCell>
-                              Used HTML, CSS, Bootstrap, JS, Gulp and
-                              collaborated with team members using AGILE
-                              methodology to create a web application for
-                              managing leasing.
+                              Virtual internsip program. Practiced HTML, CSS,
+                              Bootstrap, JavaScript, Gulp and collaborated with
+                              team members using AGILE software methodology to
+                              create a web application to manage leasing.
                             </StructuredListCell>
                           </StructuredListRow>
                         </StructuredListBody>
