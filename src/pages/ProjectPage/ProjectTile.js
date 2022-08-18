@@ -12,7 +12,7 @@ const ProjectTile = ({ name, description, image, live, repo, alt, tags }) => {
           </Column>
 
           <Column md={4} lg={4} sm={4} className="project-tile__tag-container">
-            {tags.map((tag) => {
+            {tags.map((tag, id) => {
               const [[key, value] = []] = Object.entries(tag);
               return (
                 <Tag
@@ -20,6 +20,7 @@ const ProjectTile = ({ name, description, image, live, repo, alt, tags }) => {
                   type={key}
                   size="sm"
                   title="Clear Filter"
+                  id={id.toString()}
                   //  {...args}
                 >
                   {value}

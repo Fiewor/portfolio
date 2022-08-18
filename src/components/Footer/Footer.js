@@ -13,12 +13,7 @@ const Footer = () => {
     <Grid className="footer" fullWidth>
       <Column lg={16} md={8} sm={4} className="footer__column">
         <Grid>
-          <Column
-            md={2}
-            lg={4}
-            sm={2}
-            className="footer__nested social-subgrid__column"
-          >
+          <Column md={2} lg={4} sm={2} className="footer__nested">
             <h3 className="footer__label">
               <Column md={8} lg={16} sm={4} className="footer__social_title">
                 React + IBM Carbon + ❤️
@@ -29,12 +24,7 @@ const Footer = () => {
             </h3>
           </Column>
 
-          <Column
-            md={2}
-            lg={4}
-            sm={2}
-            className="footer__nested social-subgrid__column"
-          >
+          <Column md={2} lg={4} sm={2} className="footer__nested">
             <Column md={4} lg={16} sm={4} className="footer__social_links">
               <Grid className="social-subgrid">
                 <Column md={2} lg={4} sm={2}>
@@ -81,13 +71,13 @@ const Footer = () => {
             </Column>
           </Column>
 
-          <Column md={2} lg={4} sm={2} className="social-subgrid__column">
+          <Column md={2} lg={4} sm={2}>
             <Link to="/projects" className="footer__link">
               Projects
             </Link>
           </Column>
 
-          <Column md={2} lg={4} sm={2} className="social-subgrid__column">
+          <Column md={2} lg={4} sm={2}>
             <Link to="/contact" className="footer__link">
               Contact
             </Link>

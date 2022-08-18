@@ -23,8 +23,7 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject",
-    "sass": "sass src/app.sass:src/app.css --watch --no-source-map"
+    "eject": "react-scripts eject"
   },
   "eslintConfig": {
     "extends": [
