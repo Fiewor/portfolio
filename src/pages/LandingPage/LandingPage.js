@@ -266,6 +266,7 @@ const LandingPage = () => {
                             <StructuredListCell head>
                               Certificate
                             </StructuredListCell>
+                            <StructuredListCell head>Issuer</StructuredListCell>
                             <StructuredListCell head>
                               Timeline
                             </StructuredListCell>
@@ -275,8 +276,9 @@ const LandingPage = () => {
                         <StructuredListBody>
                           <StructuredListRow>
                             <StructuredListCell>
-                              Microsoft Azure AI Engineer Associate
+                              Azure AI Engineer Associate
                             </StructuredListCell>
+                            <StructuredListCell>Microsoft</StructuredListCell>
                             <StructuredListCell>
                               09/2021 - 09/2022
                             </StructuredListCell>
@@ -292,9 +294,9 @@ const LandingPage = () => {
                           </StructuredListRow>
                           <StructuredListRow>
                             <StructuredListCell>
-                              IBM Carbon Design System Developer Essentials -
-                              React
+                              Carbon Design System Developer Essentials - React
                             </StructuredListCell>
+                            <StructuredListCell>IBM</StructuredListCell>
                             <StructuredListCell>
                               10/2021 - Present
                             </StructuredListCell>
@@ -310,7 +312,10 @@ const LandingPage = () => {
                           </StructuredListRow>
                           <StructuredListRow>
                             <StructuredListCell>
-                              freeCodeCamp Responsive Web Design Certiﬁcate
+                              Responsive Web Design Certiﬁcate
+                            </StructuredListCell>
+                            <StructuredListCell>
+                              freeCodeCamp
                             </StructuredListCell>
                             <StructuredListCell>
                               11/2020 - Present
@@ -327,8 +332,9 @@ const LandingPage = () => {
                           </StructuredListRow>
                           <StructuredListRow>
                             <StructuredListCell>
-                              IBM - Introduction to Open Source
+                              Introduction to Open Source
                             </StructuredListCell>
+                            <StructuredListCell>IBM</StructuredListCell>
                             <StructuredListCell>
                               06/2021 - Present
                             </StructuredListCell>
@@ -346,6 +352,7 @@ const LandingPage = () => {
                             <StructuredListCell>
                               Google Cloud - Certiﬁcate of Course Completion
                             </StructuredListCell>
+                            <StructuredListCell>Google</StructuredListCell>
                             <StructuredListCell>
                               02/2021 - Present
                             </StructuredListCell>
