@@ -5,7 +5,7 @@ import {
   LogoGithub,
   LogoLinkedin,
   LogoTwitter,
-  LogoDiscord,
+  Email,
 } from "@carbon/react/icons";
 
 const Footer = () => {
@@ -13,7 +13,12 @@ const Footer = () => {
     <Grid className="footer" fullWidth>
       <Column lg={16} md={8} sm={4} className="footer__column">
         <Grid>
-          <Column md={2} lg={4} sm={2} className="footer__nested">
+          <Column
+            md={2}
+            lg={4}
+            sm={2}
+            className="footer__nested social-subgrid__column"
+          >
             <h3 className="footer__label">
               <Column md={8} lg={16} sm={4} className="footer__social_title">
                 React + IBM Carbon + ❤️
@@ -24,7 +29,12 @@ const Footer = () => {
             </h3>
           </Column>
 
-          <Column md={2} lg={4} sm={2} className="footer__nested">
+          <Column
+            md={2}
+            lg={4}
+            sm={2}
+            className="footer__nested social-subgrid__column"
+          >
             <Column md={4} lg={16} sm={4} className="footer__social_links">
               <Grid className="social-subgrid">
                 <Column md={2} lg={4} sm={2}>
@@ -57,29 +67,29 @@ const Footer = () => {
                     <LogoTwitter size={24} />
                   </a>
                 </Column>
-                <Column md={2} lg={4} sm={2} href="https://discord.com">
+                <Column md={2} lg={4} sm={2}>
                   <a
                     className="social-subgrid__icon-container"
-                    href="https://discord.com"
+                    href="mailto:johnfiewor@gmail.com"
                     target="_blank"
                     rel="noopener noreferrer"
                   >
-                    <LogoDiscord size={24} />
+                    <Email size={24} />
                   </a>
                 </Column>
               </Grid>
             </Column>
           </Column>
 
-          <Column md={2} lg={4} sm={2}>
+          <Column md={2} lg={4} sm={2} className="social-subgrid__column">
             <Link to="/projects" className="footer__link">
               Projects
             </Link>
           </Column>
 
-          <Column md={2} lg={4} sm={2}>
-            <Link to="/about" className="footer__link">
-              About
+          <Column md={2} lg={4} sm={2} className="social-subgrid__column">
+            <Link to="/contact" className="footer__link">
+              Contact
             </Link>
           </Column>
         </Grid>
