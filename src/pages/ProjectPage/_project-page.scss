@@ -62,4 +62,7 @@
 
 .project-tile__tag-container {
   margin: $spacing-01 0;
+  @include breakpoint-down(md) {
+    padding-left: $spacing-04;
+  }
 }
