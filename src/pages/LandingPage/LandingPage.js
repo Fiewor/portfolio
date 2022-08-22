@@ -21,6 +21,7 @@ import { Link } from "react-router-dom";
 import { Launch, DocumentDownload } from "@carbon/react/icons";
 
 import downloadResume from "./downloadResume.js";
+import me from "../../assets/me.jpg";
 
 const LandingPage = () => {
   const url =
@@ -56,8 +57,8 @@ const LandingPage = () => {
                 <TabPanel>
                   <Grid className="tabs-group-content">
                     <Column
-                      md={8}
-                      lg={16}
+                      md={4}
+                      lg={7}
                       sm={4}
                       className="landing-page__tab-content"
                     >
@@ -78,13 +79,13 @@ const LandingPage = () => {
                         Read more
                       </Button>
                     </Column>
-                    {/* <Column md={4} lg={{ span: 8, offset: 7 }} sm={4}>
+                    <Column md={4} lg={{ span: 8, offset: 7 }} sm={4}>
                       <img
                         className="landing-page__illo"
-                        src={`${process.env.PUBLIC_URL}/me.jpg`}
                         alt="Profile"
+                        src={me}
                       />
-                    </Column> */}
+                    </Column>
                   </Grid>
                 </TabPanel>
 
