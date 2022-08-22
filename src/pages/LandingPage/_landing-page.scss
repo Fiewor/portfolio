@@ -61,8 +61,12 @@ $html-font-size: 16px;
   }
 }
 
+.landing-page__p__span {
+  @include type-style("productive-heading-04");
+}
+
 .landing-page__span {
-  @include type-style("productive-heading-02");
+  @include type-style("productive-heading-01");
 }
 
 .landing-page__location {

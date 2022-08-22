@@ -237,7 +237,7 @@ const LandingPage = () => {
                           </StructuredListRow>
                           <StructuredListRow>
                             <StructuredListCell>
-                              Frontend Web Development Intern
+                              Web Development Intern (Frontend)
                             </StructuredListCell>
                             <StructuredListCell>
                               <p className="landing-page__span">Zuri</p>
