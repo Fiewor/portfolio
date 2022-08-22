@@ -58,14 +58,16 @@ const Footer = () => {
                   </a>
                 </Column>
                 <Column md={2} lg={4} sm={2}>
-                  <a
+                  <Link
                     className="social-subgrid__icon-container"
-                    href="mailto:johnfiewor@gmail.com"
-                    target="_blank"
-                    rel="noopener noreferrer"
+                    to="#"
+                    onClick={(e) => {
+                      window.location.href = "mailto:johnfiewor@gmail.com";
+                      e.preventDefault();
+                    }}
                   >
                     <Email size={24} />
-                  </a>
+                  </Link>
                 </Column>
               </Grid>
             </Column>
