@@ -227,7 +227,7 @@ const LandingPage = () => {
                               </Column>
                               <Column lg={16} md={8} sm={4}>
                                 <span className="landing-page__cell-span">
-                                  Technologies:
+                                  Technologies:{" "}
                                 </span>
                                 MVVM Architectural Pattern, React, TypeScript,
                                 JavaScript, Styled components, React Testing
