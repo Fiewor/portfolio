@@ -16,10 +16,13 @@ $html-font-size: 16px;
 .landing-page__illo {
   max-width: 100%;
   max-height: 60vh;
-  justify-self: auto;
   @include breakpoint-down(md) {
     padding-top: $spacing-06;
   }
+}
+
+.landing-page--image-container {
+  justify-self: flex-end;
 }
 
 .landing-page__banner {
@@ -57,8 +60,13 @@ $html-font-size: 16px;
     max-width: 75%;
   }
 }
-.landing-page__p__span {
-  @include type-style("productive-heading-04");
+
+.landing-page__span {
+  @include type-style("productive-heading-02");
+}
+
+.landing-page__location {
+  @include type-style("body-compact-01");
 }
 
 .landing-page__banner,

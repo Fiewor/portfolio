@@ -79,7 +79,12 @@ const LandingPage = () => {
                         Read more
                       </Button>
                     </Column>
-                    <Column md={4} lg={{ span: 8, offset: 7 }} sm={4}>
+                    <Column
+                      md={4}
+                      lg={{ span: 8, offset: 7 }}
+                      sm={4}
+                      className="landing-page--image-container"
+                    >
                       <img
                         className="landing-page__illo"
                         alt="Profile"
@@ -191,7 +196,10 @@ const LandingPage = () => {
                           <StructuredListRow head>
                             <StructuredListCell head>Role</StructuredListCell>
                             <StructuredListCell head>
-                              Company | Timeline
+                              Company
+                            </StructuredListCell>
+                            <StructuredListCell head>
+                              Timeline
                             </StructuredListCell>
                             <StructuredListCell head>
                               Description
@@ -204,21 +212,23 @@ const LandingPage = () => {
                               Frontend Developer
                             </StructuredListCell>
                             <StructuredListCell>
-                              <span className="landing-page__cell-span">
-                                HelloHub{" "}
-                              </span>
-                              | 02.2022 - Present
+                              <p className="landing-page__span">HelloHub</p>
+                              <p className="landing-page__location">
+                                London, UK - Remote
+                              </p>
+                            </StructuredListCell>
+                            <StructuredListCell>
+                              02.2022 - Present
                             </StructuredListCell>
                             <StructuredListCell className="landing-page__cell">
                               <Column lg={16} md={8} sm={4}>
                                 Working on the frontend of HelloHub's suite of
-                                applications along with an international remote
-                                team.
+                                applications along with an international team.
                               </Column>
                               <Column lg={16} md={8} sm={4}>
                                 <span className="landing-page__cell-span">
                                   Technologies:
-                                </span>{" "}
+                                </span>
                                 MVVM Architectural Pattern, React, TypeScript,
                                 JavaScript, Styled components, React Testing
                                 Library, Jest, Storybook.js.
@@ -230,10 +240,13 @@ const LandingPage = () => {
                               Frontend Web Development Intern
                             </StructuredListCell>
                             <StructuredListCell>
-                              <span className="landing-page__cell-span">
-                                Zuri{" "}
-                              </span>
-                              | 03.2021 - 07.2021
+                              <p className="landing-page__span">Zuri</p>
+                              <p className="landing-page__location">
+                                Nigeria - Remote
+                              </p>
+                            </StructuredListCell>
+                            <StructuredListCell>
+                              03.2021 - 07.2021
                             </StructuredListCell>
                             <StructuredListCell>
                               Virtual internsip program. Practiced HTML, CSS,
