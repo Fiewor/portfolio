@@ -37,6 +37,12 @@
   color: black;
 }
 
+.footer__container {
+  @include breakpoint-down(md) {
+    padding-top: $spacing-06;
+  }
+}
+
 .footer__link {
   text-decoration: none;
 }

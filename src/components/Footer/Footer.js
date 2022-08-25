@@ -73,13 +73,13 @@ const Footer = () => {
             </Column>
           </Column>
 
-          <Column md={2} lg={4} sm={2}>
+          <Column md={2} lg={4} sm={2} className="footer__container">
             <Link to="/projects" className="footer__link">
               Projects
             </Link>
           </Column>
 
-          <Column md={2} lg={4} sm={2}>
+          <Column md={2} lg={4} sm={2} className="footer__container">
             <Link to="/contact" className="footer__link">
               Contact
             </Link>
