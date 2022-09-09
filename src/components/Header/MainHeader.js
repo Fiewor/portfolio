@@ -36,6 +36,9 @@ const MainHeader = () => (
           <HeaderMenuItem element={Link} to="/contact">
             Contact
           </HeaderMenuItem>
+          <HeaderMenuItem element={Link} to="/services">
+            Services
+          </HeaderMenuItem>
         </HeaderNavigation>
         <SideNav
           aria-label="Side navigation"
@@ -49,6 +52,9 @@ const MainHeader = () => (
               </HeaderMenuItem>
               <HeaderMenuItem element={Link} to="/contact">
                 Contact
+              </HeaderMenuItem>
+              <HeaderMenuItem element={Link} to="/services">
+                Services
               </HeaderMenuItem>
             </HeaderSideNavItems>
           </SideNavItems>

@@ -7,6 +7,7 @@ import MainHeader from "./components/Header/";
 import LandingPage from "./pages/LandingPage";
 import ProjectPage from "./pages/ProjectPage";
 import ContactPage from "./pages/ContactPage";
+import ServicesPage from "./pages/ServicesPage";
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
         <Routes>
           <Route path="/" element={<LandingPage />} />
           <Route path="/projects" element={<ProjectPage />} />
+          <Route path="/services" element={<ServicesPage />} />
           <Route path="/contact" element={<ContactPage />} />
         </Routes>
       </Content>
