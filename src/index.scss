@@ -3,6 +3,10 @@
 @use "@carbon/react/scss/breakpoint" as *;
 // @use "../node_modules/@carbon/react/scss/breakpoint" as *;
 
+a {
+  text-decoration: none;
+}
+
 .cds--content {
   margin-top: 3rem;
   padding: 0;
