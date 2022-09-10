@@ -294,15 +294,15 @@ const LandingPage = () => {
                             </StructuredListCell>
                             <StructuredListCell>Microsoft</StructuredListCell>
                             <StructuredListCell>
-                              09/2021 - 09/2022
+                              09/2021 - 09/2023
                             </StructuredListCell>
                             <StructuredListCell>
                               <CarbonLink
-                                href="https://bit.ly/3ljwncE"
+                                href="https://bit.ly/azureAIEngineer"
                                 target="_blank"
                                 rel="noopener noreferrer"
                               >
-                                https://bit.ly/3ljwncE
+                                https://bit.ly/azureAIEngineer
                               </CarbonLink>
                             </StructuredListCell>
                           </StructuredListRow>
