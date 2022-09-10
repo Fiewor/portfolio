@@ -19,7 +19,7 @@
 
 .detail-contact {
   @include type-style("body-compact-01");
-  padding: $spacing-04 0 0;
+  padding: $spacing-03 0 $spacing-02;
 }
 
 .list {
@@ -34,4 +34,9 @@
 
 .accordion-span {
   font-weight: bold;
+}
+
+li::before {
+  content: "";
+  padding-top: $spacing-02;
 }
