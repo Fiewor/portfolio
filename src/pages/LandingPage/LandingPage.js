@@ -93,7 +93,6 @@ const LandingPage = () => {
                     </Column>
                   </Grid>
                 </TabPanel>
-
                 <TabPanel>
                   <Grid className="tabs-group-content">
                     <Column
@@ -218,20 +217,25 @@ const LandingPage = () => {
                               </p>
                             </StructuredListCell>
                             <StructuredListCell>
-                              02.2022 - Present
+                              02.2022 - 10.2022
                             </StructuredListCell>
                             <StructuredListCell className="landing-page__cell">
                               <Column lg={16} md={8} sm={4}>
-                                Working on the frontend of HelloHub's suite of
-                                applications along with an international team.
+                                Redesigned the UI of the HelloHub Admin
+                                Dashboard to achieve mobile responsiveness based
+                                on a Figma design.
+                              </Column>
+                              <Column lg={16} md={8} sm={4}>
+                                Wrote test-driven code and refactored some
+                                components to use TypeScript.
                               </Column>
                               <Column lg={16} md={8} sm={4}>
                                 <span className="landing-page__cell-span">
                                   Technologies:{" "}
                                 </span>
-                                MVVM Architectural Pattern, React, TypeScript,
-                                JavaScript, Styled components, React Testing
-                                Library, Jest, Storybook.js.
+                                TDD, MVVM Architectural Pattern, React,
+                                TypeScript, JavaScript, Styled components, React
+                                Testing Library, Jest, Storybook.js.
                               </Column>
                             </StructuredListCell>
                           </StructuredListRow>
@@ -249,7 +253,7 @@ const LandingPage = () => {
                               03.2021 - 07.2021
                             </StructuredListCell>
                             <StructuredListCell>
-                              Virtual internsip program. Practiced HTML, CSS,
+                              Virtual internship program. Practiced HTML, CSS,
                               Bootstrap, JavaScript, Gulp and collaborated with
                               team members using AGILE software methodology to
                               create a web application to manage leasing.
@@ -308,6 +312,24 @@ const LandingPage = () => {
                           </StructuredListRow>
                           <StructuredListRow>
                             <StructuredListCell>
+                              Azure AI Fundamentals
+                            </StructuredListCell>
+                            <StructuredListCell>Microsoft</StructuredListCell>
+                            <StructuredListCell>
+                              05/2021 - Present
+                            </StructuredListCell>
+                            <StructuredListCell>
+                              <CarbonLink
+                                href="https://bit.ly/azureAIFundamentals"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                              >
+                                https://bit.ly/azureAIFundamentals
+                              </CarbonLink>
+                            </StructuredListCell>
+                          </StructuredListRow>
+                          <StructuredListRow>
+                            <StructuredListCell>
                               Carbon Design System Developer Essentials - React
                             </StructuredListCell>
                             <StructuredListCell>IBM</StructuredListCell>
@@ -326,7 +348,7 @@ const LandingPage = () => {
                           </StructuredListRow>
                           <StructuredListRow>
                             <StructuredListCell>
-                              Responsive Web Design Certiﬁcate
+                              Responsive Web Design
                             </StructuredListCell>
                             <StructuredListCell>
                               freeCodeCamp
@@ -377,6 +399,44 @@ const LandingPage = () => {
                                 rel="noopener noreferrer"
                               >
                                 https://bit.ly/2YT7hKf
+                              </CarbonLink>
+                            </StructuredListCell>
+                          </StructuredListRow>
+                          <StructuredListRow>
+                            <StructuredListCell>
+                              Black Valley Mentoring Programme
+                            </StructuredListCell>
+                            <StructuredListCell>
+                              Black Valley
+                            </StructuredListCell>
+                            <StructuredListCell>
+                              09/2021 - Present
+                            </StructuredListCell>
+                            <StructuredListCell>
+                              <CarbonLink
+                                href="https://bit.ly/blackValley"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                              >
+                                https://bit.ly/blackValley
+                              </CarbonLink>
+                            </StructuredListCell>
+                          </StructuredListRow>
+                          <StructuredListRow>
+                            <StructuredListCell>
+                              Fundamentals of Digital Marketing
+                            </StructuredListCell>
+                            <StructuredListCell>Google</StructuredListCell>
+                            <StructuredListCell>
+                              02/2019 - Present
+                            </StructuredListCell>
+                            <StructuredListCell>
+                              <CarbonLink
+                                href="https://goo.gl/y4UjgN"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                              >
+                                https://goo.gl/y4UjgN
                               </CarbonLink>
                             </StructuredListCell>
                           </StructuredListRow>
