@@ -2,7 +2,7 @@ import { saveAs } from "file-saver";
 
 export default function downloadResume() {
   saveAs(
-    "https://drive.google.com/file/d/1lrp9v4lH5gUGu0f1DLjO6xxt67qb8PGZ/view?usp=sharing",
+    "https://drive.google.com/file/d/1sVGzZP3V4UPvreYTgZ2CKOvU0_hEyWrv/view?usp=share_link",
     "john_resume.pdf"
   );
 }
