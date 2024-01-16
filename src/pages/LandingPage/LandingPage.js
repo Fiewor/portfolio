@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import {
   Breadcrumb,
   BreadcrumbItem,
@@ -24,13 +24,32 @@ import downloadResume from "./downloadResume.js";
 import me from "../../assets/me.jpg";
 
 const LandingPage = () => {
+  const [state, setState] = useState(false);
   const url =
-    "https://drive.google.com/file/d/1lrp9v4lH5gUGu0f1DLjO6xxt67qb8PGZ/view?usp=sharing";
+    "https://drive.google.com/file/d/1RpFmrZEhC99Dze4--cOm2QgRBzDfBDYO/view?usp=sharing";
 
   // * to be used for tooltip definition
   const definition = {
     mern: "a MERN stack developer is someone who specializes in using MongoDB, Express, React and Nodejs to build fullstack web applications.",
   };
+
+  useEffect(() => {
+    const switchToTrue = () => {
+      setState(true);
+
+      setTimeout(() => {
+        setState(false);
+      }, 5000);
+    };
+
+    switchToTrue();
+
+    const intervalId = setInterval(() => {
+      switchToTrue();
+    }, 10000);
+
+    return () => clearInterval(intervalId);
+  }, []);
 
   return (
     <Grid className="landing-page" fullWidth>
@@ -40,7 +59,12 @@ const LandingPage = () => {
             <Link to="/">Home</Link>
           </BreadcrumbItem>
         </Breadcrumb>
-        <h1 className="landing-page__heading">WELCOME TO MY PORTFOLIO</h1>
+        <h1
+          data-text="WELCOME TO MY PORTFOLIO"
+          className={`${state ? "glitch" : ""} landing-page__heading`}
+        >
+          WELCOME TO MY PORTFOLIO
+        </h1>
       </Column>
 
       <Column lg={16} md={8} sm={4} className="landing-page__r2">
@@ -64,8 +88,12 @@ const LandingPage = () => {
                     >
                       <h2 className="landing-page__subheading">Hi there,</h2>
                       <p className="landing-page__p">
-                        my name is{" "}
-                        <span className="landing-page__p__span">
+                        my name is
+                        <span
+                          data-text="John Fiewor"
+                          className="other-glitch landing-page__p__span"
+                        >
+                          {" "}
                           John Fiewor
                         </span>{" "}
                         and I'm a MERN-Stack developer.
@@ -208,6 +236,41 @@ const LandingPage = () => {
                         <StructuredListBody>
                           <StructuredListRow>
                             <StructuredListCell>
+                              IT Executive
+                            </StructuredListCell>
+                            <StructuredListCell>
+                              <p className="landing-page__span">
+                                Consolidated Hallmark Insurance
+                              </p>
+                              <p className="landing-page__location">
+                                Lagos, Nigeria
+                              </p>
+                            </StructuredListCell>
+                            <StructuredListCell>
+                              01.2023 - Present
+                            </StructuredListCell>
+                            <StructuredListCell className="landing-page__cell">
+                              <Column lg={16} md={8} sm={4}>
+                                Working on products including an internal
+                                budgeting app and a travel insurance portal.
+                              </Column>
+                              <Column lg={16} md={8} sm={4}>
+                                Major part of insourcing of travel portal app
+                                resulting in reduced cost, improved development
+                                speed and increasing alignment with business
+                                needs.
+                              </Column>
+                              <Column lg={16} md={8} sm={4}>
+                                <span className="landing-page__cell-span">
+                                  Technologies:{" "}
+                                </span>
+                                React, JavaScript, Sass, Laravel, PHP, C#.NET,
+                                MySQL, SQL Server
+                              </Column>
+                            </StructuredListCell>
+                          </StructuredListRow>
+                          <StructuredListRow>
+                            <StructuredListCell>
                               Frontend Developer
                             </StructuredListCell>
                             <StructuredListCell>
@@ -307,6 +370,47 @@ const LandingPage = () => {
                                 rel="noopener noreferrer"
                               >
                                 https://bit.ly/azureAIEngineer
+                              </CarbonLink>
+                            </StructuredListCell>
+                          </StructuredListRow>
+                          <StructuredListRow>
+                            <StructuredListCell>
+                              Advanced Learning Algorithms
+                            </StructuredListCell>
+                            <StructuredListCell>
+                              DeepLearning.AI, Stanford University
+                            </StructuredListCell>
+                            <StructuredListCell>
+                              12/2023 - Present
+                            </StructuredListCell>
+                            <StructuredListCell>
+                              <CarbonLink
+                                href="https://bit.ly/AdvLearnAlgos"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                              >
+                                https://bit.ly/AdvLearnAlgos
+                              </CarbonLink>
+                            </StructuredListCell>
+                          </StructuredListRow>
+                          <StructuredListRow>
+                            <StructuredListCell>
+                              Supervised Machine Learning: Regression and
+                              Classification
+                            </StructuredListCell>
+                            <StructuredListCell>
+                              DeepLearning.AI, Stanford University
+                            </StructuredListCell>
+                            <StructuredListCell>
+                              10/2023 - Present
+                            </StructuredListCell>
+                            <StructuredListCell>
+                              <CarbonLink
+                                href="https://bit.ly/SupML"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                              >
+                                https://bit.ly/SupML
                               </CarbonLink>
                             </StructuredListCell>
                           </StructuredListRow>
