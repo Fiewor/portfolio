@@ -20,11 +20,9 @@ const useFormComponent = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    const {
-      REACT_APP_EMAILJS_TEMPLATE_ID: templateId,
-      REACT_APP_EMAILJS_SERVICE_ID: serviceId,
-      REACT_APP_EMAILJS_PUBLIC_KEY: publicKey,
-    } = process.env;
+    const templateId = import.meta.env.VITE_EMAILJS_TEMPLATE_ID;
+    const serviceId = import.meta.env.VITE_EMAILJS_SERVICE_ID;
+    const publicKey = import.meta.env.VITE_EMAILJS_PUBLIC_KEY;
 
     const templateParams = {
       firstName,

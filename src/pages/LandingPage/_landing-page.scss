@@ -1,3 +1,4 @@
+@use "sass:math";
 @use "@carbon/react/scss/spacing" as *;
 @use "@carbon/react/scss/type" as *;
 @use "@carbon/react/scss/breakpoint" as *;
@@ -7,10 +8,10 @@
 
 $html-font-size: 16px;
 @function stripUnit($value) {
-  @return $value / ($value * 0 + 1);
+  @return math.div($value, ($value * 0 + 1));
 }
-@function rem($pxValue) {
-  @return #{stripUnit($pxValue) / stripUnit($html-font-size)}rem;
+@function custom-rem($pxValue) {
+  @return #{math.div(stripUnit($pxValue), stripUnit($html-font-size))}rem;
 }
 
 .landing-page {
@@ -37,7 +38,7 @@ $html-font-size: 16px;
   }
 
   &__r2 {
-    margin-top: rem(-54px);
+    margin-top: 0;
     padding: $spacing-01 $spacing-06;
   }
 
@@ -81,6 +82,26 @@ $html-font-size: 16px;
     @include breakpoint-down(md) {
       margin-left: 0;
       margin-right: 0;
+      padding-left: $spacing-03;
+      padding-right: $spacing-03;
+    }
+  }
+
+  // Fix for tabs on mobile
+  .tabs-group {
+    @include breakpoint-down(md) {
+      display: flex;
+      flex-direction: column; // Stack tabs vertically on small screens
+      // OR overflow-x: auto; // Scrollable if preferred
+      // width: 100%;
+    }
+  }
+
+  .tabs-group-content {
+    padding: $spacing-10 $spacing-03;
+    min-height: 200px;
+    @include breakpoint-down(md) {
+      padding: $spacing-05 $spacing-03;
     }
   }
 
@@ -197,46 +218,46 @@ $html-font-size: 16px;
 
 @keyframes noise-zoom {
   0% {
-    transform: scale(1 - random(10) / 100);
+    transform: scale(1 - math.div(math.random(10), 100));
   }
   10% {
-    transform: scale(1 - random(3) / 100);
+    transform: scale(1 - math.div(math.random(3), 100));
   }
   20% {
-    transform: scale(1 - random(3) / 100) skew(-(random(10)-5) + deg, 0);
+    transform: scale(1 - math.div(math.random(3), 100)) skew(-(math.random(10)-5) + deg, 0);
   }
   30% {
-    transform: scale(1 - random(3) / 100);
+    transform: scale(1 - math.div(math.random(3), 100));
   }
   40% {
-    transform: scale(1 - random(3) / 100);
+    transform: scale(1 - math.div(math.random(3), 100));
   }
   50% {
-    transform: scale(1 - random(3) / 100);
+    transform: scale(1 - math.div(math.random(3), 100));
   }
   60% {
-    transform: scale(1 - random(3) / 100);
+    transform: scale(1 - math.div(math.random(3), 100));
   }
   70% {
-    transform: scale(1 - random(3) / 100);
+    transform: scale(1 - math.div(math.random(3), 100));
   }
   80% {
-    transform: scale(1 - random(3) / 100);
-    transform: scale(1 - random(3) / 100) skew(-random(10) + deg, 0);
+    transform: scale(1 - math.div(math.random(3), 100));
+    transform: scale(1 - math.div(math.random(3), 100)) skew(-(math.random(10)) + deg, 0);
   }
   90% {
-    transform: scale(1 - random(3) / 100);
+    transform: scale(1 - math.div(math.random(3), 100));
   }
 }
 
 @keyframes noise-anim {
   $steps: 20;
   @for $i from 0 through $steps {
-    #{percentage($i*(1/$steps))} {
-      clip: rect(random(100) + px, 9999px, random(100) + px, 0);
-      text-shadow: (random(20)-10 + px)
-        (random(20)-10 + px)
-        (random(40) + px)
+    #{math.percentage($i*(math.div(1, $steps)))} {
+      clip: rect(math.random(100) + px, 9999px, math.random(100) + px, 0);
+      text-shadow: (math.random(20)-10 + px)
+        (math.random(20)-10 + px)
+        (math.random(40) + px)
         rgba(255, 255, 255, 0.8);
     }
   }
@@ -245,12 +266,12 @@ $html-font-size: 16px;
 @keyframes noise-anim-2 {
   $steps: 20;
   @for $i from 0 through $steps {
-    #{percentage($i*(1/$steps))} {
-      clip: rect(random(100) + px, 9999px, random(100) + px, 0);
-      text-shadow: (random(20)-10 + px)
-        (random(20)-10 + px)
-        (random(40) + px)
-        rgba(random(255), random(255), random(255), 0.6);
+    #{math.percentage($i*(math.div(1, $steps)))} {
+      clip: rect(math.random(100) + px, 9999px, math.random(100) + px, 0);
+      text-shadow: (math.random(20)-10 + px)
+        (math.random(20)-10 + px)
+        (math.random(40) + px)
+        rgba(math.random(255), math.random(255), math.random(255), 0.6);
     }
   }
 }

@@ -13,10 +13,10 @@ import {
   SideNavItems,
   HeaderSideNavItems,
 } from "@carbon/react";
-import { LogoGithub, Home, UserAvatar } from "@carbon/react/icons";
+import { LogoGithub, Home, UserAvatar, Light, Asleep } from "@carbon/react/icons";
 import { Link } from "react-router-dom";
 
-const MainHeader = () => (
+const MainHeader = ({ theme, toggleTheme }) => (
   <HeaderContainer
     render={({ isSideNavExpanded, onClickSideNavExpand }) => (
       <Header aria-label="Carbon Main">
@@ -60,6 +60,13 @@ const MainHeader = () => (
           </SideNavItems>
         </SideNav>
         <HeaderGlobalBar>
+          <HeaderGlobalAction
+            aria-label="Toggle Theme"
+            tooltipAlignment="center"
+            onClick={toggleTheme}
+          >
+            {theme === "g100" ? <Light size={20} /> : <Asleep size={20} />}
+          </HeaderGlobalAction>
           <HeaderGlobalAction aria-label="Home" tooltipAlignment="center">
             <Link to="/">
               <Home size={20} element={Link} to="/" />
