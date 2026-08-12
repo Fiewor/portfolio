@@ -1,6 +1,7 @@
 @use "@carbon/react/scss/spacing" as *;
 @use "@carbon/react/scss/breakpoint" as *;
 @use "@carbon/react/scss/type" as *;
+@use "@carbon/react/scss/theme" as *;
 
 .project-page__r1 {
   padding-top: $spacing-05;
@@ -27,6 +28,17 @@
   &:hover {
     transition: 0.3s ease-in;
   }
+}
+
+.project-tile-placeholder {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  min-height: $spacing-13;
+  background-color: $layer-01;
+  margin-bottom: $spacing-03;
+  @include type-style("heading-compact-01");
 }
 
 .project-tile__column {

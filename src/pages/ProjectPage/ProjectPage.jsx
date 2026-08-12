@@ -1,72 +1,71 @@
 import React from "react";
 import ProjectTile from "./ProjectTile";
 import { Grid, Column, Button } from "@carbon/react";
-import starCard from "../../assets/star-card.PNG";
-import aiGrader from "../../assets/ai-grader.png";
+import gradrAI from "../../assets/gradrai.png";
 import goodNews from "../../assets/good-news.PNG";
-import mollo from "../../assets/mollo.PNG";
-import anyLease from "../../assets/anylease.PNG";
 
 const ProjectPage = () => {
-  // ? Which projects do I want to display:
-  // AI-Grader
-  // Good-news
-  // Star-card
   const projects = [
     {
       id: "1",
-      name: "AI-Grader",
+      name: "GradrAI",
       description:
-        "Using Azure AI Cognitive services to grade handwritten PBTs.",
-      image: aiGrader,
-      live: "https://www.aigrader.live",
-      repo: "https://github.com/Fiewor/ai-grader",
-      alt: "ai-grader landing page",
-      tags: [{ red: "Undergoing fixes" }, { green: "Live" }],
+        "End-to-end assessment platform for educators and schools — generate, deliver, grade, and analyse paper-based exams, CBTs, and AI-driven mock tests. Backed by Google for Startups and MongoDB for Startups. 3rd Place at the Google Gemini #BuildWithAI Hackathon.",
+      image: gradrAI,
+      live: "https://gradrai.com",
+      alt: "GradrAI landing page",
+      tags: [
+        { purple: "Award Winner" },
+        { green: "Live" },
+        { blue: "AI/ML" },
+      ],
     },
     {
       id: "2",
       name: "GoodNews",
       description:
-        "Web application displaying positive news from over 100 countries using GDELT dataset.",
+        "Web application showcasing positive news from over 100 countries using the GDELT dataset. Won 2nd place out of 600+ participants at the MongoDB World Hackathon.",
       image: goodNews,
       live: "https://github.com/avik-singha/good-news",
       repo: "https://github.com/avik-singha/good-news",
       alt: "Good News app landing page",
       tags: [
-        { purple: "Teamwork" },
-        { gray: "Not live" },
+        { purple: "Award Winner" },
         { blue: "Hackathon" },
+        { teal: "MongoDB" },
       ],
     },
     {
       id: "3",
-      name: "Star-Card",
+      name: "Hydrogen Storefront",
       description:
-        " Web platform for real-time reporting and visibility into various workplace risks and hazards.",
-      image: starCard,
-      live: "https://star-card.us-south.cf.appdomain.cloud/",
-      repo: "https://github.com/Fiewor/star-card",
-      alt: "Star Card landing page",
-      tags: [{ purple: "Teamwork" }, { green: "Live" }, { blue: "Hackathon" }],
+        "Headless Shopify storefront built with Hydrogen + Remix, featuring full product browsing, cart management, customer accounts, and predictive search. Deployed on Shopify Oxygen with CI/CD.",
+      repo: "https://github.com/Fiewor/hydrogen-storefront",
+      alt: "Hydrogen Storefront screenshot",
+      tags: [
+        { teal: "TypeScript" },
+        { purple: "Shopify" },
+        { cyan: "Remix" },
+      ],
     },
     {
       id: "4",
-      name: "AnyLease",
+      name: "ReaDoc",
       description:
-        "Web application to help automate leasing. Final team project after virtual internship.",
-      image: anyLease,
-      live: "https://any-lease.netlify.app/",
-      repo: "https://github.com",
-      alt: "Anylease landing page",
-      tags: [{ purple: "Teamwork" }, { green: "Live" }],
+        "AI document extraction tool that uses Google Gemini 1.5 Flash to extract text from uploaded images and export content to Word documents.",
+      repo: "https://github.com/Fiewor/readoc",
+      alt: "ReaDoc screenshot",
+      tags: [
+        { blue: "AI/ML" },
+        { teal: "Next.js" },
+        { magenta: "Gemini" },
+      ],
     },
   ];
 
   return (
     <>
       <Grid>
-        {/* <Grid className="project__grid"> */}
         {projects.map(
           ({ id, name, description, image, live, repo, alt, tags }) => {
             return (
@@ -85,12 +84,12 @@ const ProjectPage = () => {
         )}
       </Grid>
       <Button
-        href="https://github.com/Fiewor/repositories"
+        href="https://github.com/Fiewor?tab=repositories&sort=updated"
         target="_blank"
         rel="noopener noreferrer"
         className="project-button"
       >
-        See more
+        See more on GitHub
       </Button>
     </>
   );

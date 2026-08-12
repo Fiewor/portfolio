@@ -31,16 +31,29 @@ const ProjectTile = ({ name, description, image, live, repo, alt, tags }) => {
 
         <p className="project-tile__description">{description}</p>
 
-        <Link href={repo} target="_blank" rel="noopener noreferrer">
-          <img className="project-tile-image" src={image} alt={alt} />
-        </Link>
+        {image ? (
+          <Link href={repo} target="_blank" rel="noopener noreferrer">
+            <img className="project-tile-image" src={image} alt={alt} />
+          </Link>
+        ) : (
+          <Link
+            href={repo}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="project-tile-placeholder"
+          >
+            View on GitHub →
+          </Link>
+        )}
 
         <Grid>
-          <Column md={2} lg={4} sm={2}>
-            <Link href={live} target="_blank" rel="noopener noreferrer">
-              Demo
-            </Link>
-          </Column>
+          {live && (
+            <Column md={2} lg={4} sm={2}>
+              <Link href={live} target="_blank" rel="noopener noreferrer">
+                Demo
+              </Link>
+            </Column>
+          )}
           <Column md={2} lg={4} sm={2}>
             <Link href={repo} target="_blank" rel="noopener noreferrer">
               Repo
