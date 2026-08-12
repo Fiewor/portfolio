@@ -1,11 +1,6 @@
 export const achievements = [
   {
-    title: "UNDP & FSD Africa Innovation Challenge Winner (2025)",
-    details:
-      "Selected as one of three winners of the UNDP Nigeria and FSD Africa Innovation Challenge for GradrAI, an AI-powered platform that automates the grading of paper-based examinations for higher-education institutions.",
-  },
-  {
-    title: "Google Gemini #BuildWithAI Hackathon – 3rd Place Winner",
+    title: "GDG #BuildWithAI Hackathon – 3rd Place Winner",
     details:
       "Led the rapid development of the initial MVP for GradrAI using Google Gemini during the national #BuildWithAI Hackathon. Built the entire frontend in under four hours and implemented the AI-driven backend, securing 3rd place.",
   },
