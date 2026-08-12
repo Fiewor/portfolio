@@ -10,7 +10,6 @@ import {
   StructuredListRow,
   StructuredListCell,
   StructuredListBody,
-  Link as CarbonLink,
   Breadcrumb,
   BreadcrumbItem,
   Tabs,
@@ -38,7 +37,6 @@ const LandingPage = () => {
 
   return (
     <Grid className="landing-page" fullWidth>
-
       <Column lg={16} md={8} sm={4} className="landing-page__banner">
         <Breadcrumb aria-label="Page navigation">
           <BreadcrumbItem>
@@ -64,21 +62,30 @@ const LandingPage = () => {
           <TabPanels>
             <TabPanel>
               <Grid className="tabs-group-content">
-                <Column md={4} lg={7} sm={4} className="landing-page__tab-content">
+                <Column
+                  md={4}
+                  lg={7}
+                  sm={4}
+                  className="landing-page__tab-content"
+                >
                   <h2 className="landing-page__subheading">Hi there,</h2>
                   <p className="landing-page__p">
                     my name is
-                    <span data-text="John Fiewor" className="other-glitch landing-page__p__span">
+                    <span
+                      data-text="John Fiewor"
+                      className="other-glitch landing-page__p__span"
+                    >
                       {" "}
                       John Fiewor
                     </span>{" "}
                     and I'm a Full-Stack Web Developer.
                   </p>
                   <p className="landing-page__p">
-                    I have a Master's degree in Computer Science and skills in web development,
-                    artificial intelligence and cloud technologies. I build software solutions using
-                    MERN-Stack (and other tools as necessary). I'm also certified in Azure AI and
-                    Google Cloud Platform fundamentals.
+                    I have a Master's degree in Computer Science and skills in
+                    web development, artificial intelligence and cloud
+                    technologies. I primarily build software solutions using
+                    MERN-Stack. I'm also certified in Azure AI and Google Cloud
+                    Platform fundamentals.
                   </p>
                   <Button
                     renderIcon={Launch}
@@ -89,8 +96,13 @@ const LandingPage = () => {
                     Read more
                   </Button>
                 </Column>
-                <Column md={4} lg={{ span: 8, offset: 8 }} sm={4} className="landing-page--image-container">
-                  <img className="landing-page__illo" alt="Profile" src={me} />
+                <Column
+                  md={4}
+                  lg={{ span: 8, offset: 8 }}
+                  sm={4}
+                  className="landing-page--image-container"
+                >
+                  <img className="landing-page__illo" alt="John Fiewor" src={me} />
                 </Column>
               </Grid>
             </TabPanel>
@@ -107,7 +119,9 @@ const LandingPage = () => {
                   <StructuredListBody>
                     {achievements.map((item, i) => (
                       <StructuredListRow key={i}>
-                        <StructuredListCell noWrap><strong>{item.title}</strong></StructuredListCell>
+                        <StructuredListCell>
+                          <strong>{item.title}</strong>
+                        </StructuredListCell>
                         <StructuredListCell>{item.details}</StructuredListCell>
                       </StructuredListRow>
                     ))}
@@ -122,16 +136,24 @@ const LandingPage = () => {
                   <StructuredListHead>
                     <StructuredListRow head>
                       <StructuredListCell head>Role</StructuredListCell>
-                      <StructuredListCell head>Company | Timeline</StructuredListCell>
+                      <StructuredListCell head>
+                        Company | Timeline
+                      </StructuredListCell>
                       <StructuredListCell head>Description</StructuredListCell>
                     </StructuredListRow>
                   </StructuredListHead>
                   <StructuredListBody>
                     {experience.map((item, i) => (
                       <StructuredListRow key={i}>
-                        <StructuredListCell noWrap><strong>{item.role}</strong></StructuredListCell>
-                        <StructuredListCell noWrap>{item.company} | {item.timeline}</StructuredListCell>
-                        <StructuredListCell>{item.description}</StructuredListCell>
+                        <StructuredListCell>
+                          <strong>{item.role}</strong>
+                        </StructuredListCell>
+                        <StructuredListCell>
+                          {item.company} | {item.timeline}
+                        </StructuredListCell>
+                        <StructuredListCell>
+                          {item.description}
+                        </StructuredListCell>
                       </StructuredListRow>
                     ))}
                   </StructuredListBody>
@@ -152,7 +174,9 @@ const LandingPage = () => {
                   <StructuredListBody>
                     {certificates.map((item, i) => (
                       <StructuredListRow key={i}>
-                        <StructuredListCell noWrap><strong>{item.name}</strong></StructuredListCell>
+                        <StructuredListCell>
+                          <strong>{item.name}</strong>
+                        </StructuredListCell>
                         <StructuredListCell>{item.issuer}</StructuredListCell>
                         <StructuredListCell>{item.date}</StructuredListCell>
                       </StructuredListRow>
@@ -167,6 +191,5 @@ const LandingPage = () => {
     </Grid>
   );
 };
-
 
 export default LandingPage;

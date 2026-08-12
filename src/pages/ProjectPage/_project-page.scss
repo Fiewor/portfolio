@@ -21,20 +21,15 @@
 }
 
 .project-tile-image {
-  // cursor: pointer;
-  width: 600px;
-  height: 300px;
-  @include breakpoint-down(md) {
-    width: 300px;
-    height: 150px;
-  }
+  max-width: 100%;
+  width: 100%;
+  height: auto;
   &:hover {
     transition: 0.3s ease-in;
   }
 }
 
 .project-tile__column {
-  // justify-self: center;
   padding: $spacing-02;
   padding-bottom: $spacing-08;
   @include breakpoint-down(md) {

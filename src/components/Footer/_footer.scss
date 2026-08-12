@@ -3,7 +3,6 @@
 @use "@carbon/react/scss/breakpoint" as *;
 @use "@carbon/react/scss/theme" as *;
 @use "./mixins.scss" as *;
-@use "./overrides.scss";
 
 .footer {
   padding-top: $spacing-02;
@@ -34,7 +33,7 @@
 }
 
 .social-subgrid__icon-container {
-  color: black;
+  color: $icon-primary;
 }
 
 .footer__container {

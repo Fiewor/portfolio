@@ -1,18 +1,10 @@
-@use "sass:math";
 @use "@carbon/react/scss/spacing" as *;
+@use "sass:math";
 @use "@carbon/react/scss/type" as *;
 @use "@carbon/react/scss/breakpoint" as *;
 @use "@carbon/react/scss/theme" as *;
 @use "./mixins.scss" as *;
 @use "./overrides.scss";
-
-$html-font-size: 16px;
-@function stripUnit($value) {
-  @return math.div($value, ($value * 0 + 1));
-}
-@function custom-rem($pxValue) {
-  @return #{math.div(stripUnit($pxValue), stripUnit($html-font-size))}rem;
-}
 
 .landing-page {
   &__illo {
@@ -38,12 +30,15 @@ $html-font-size: 16px;
   }
 
   &__r2 {
-    margin-top: 0;
+    margin-top: -$spacing-09;
     padding: $spacing-01 $spacing-06;
   }
 
   .tabs-group-content {
-    padding: $spacing-10 $spacing-03;
+    padding: $spacing-07 $spacing-03;
+    @include breakpoint(md) {
+      padding: $spacing-10 $spacing-06;
+    }
   }
 
   &__subheading {
@@ -74,36 +69,6 @@ $html-font-size: 16px;
     @include type-style("body-compact-01");
   }
 
-  &__banner,
-  &__r2 {
-    margin-left: -20px;
-    margin-right: -20px;
-
-    @include breakpoint-down(md) {
-      margin-left: 0;
-      margin-right: 0;
-      padding-left: $spacing-03;
-      padding-right: $spacing-03;
-    }
-  }
-
-  // Fix for tabs on mobile
-  .tabs-group {
-    @include breakpoint-down(md) {
-      display: flex;
-      flex-direction: column; // Stack tabs vertically on small screens
-      // OR overflow-x: auto; // Scrollable if preferred
-      // width: 100%;
-    }
-  }
-
-  .tabs-group-content {
-    padding: $spacing-10 $spacing-03;
-    min-height: 200px;
-    @include breakpoint-down(md) {
-      padding: $spacing-05 $spacing-03;
-    }
-  }
 
   &__cell-span {
     @include type-style("productive-heading-01");
@@ -120,7 +85,9 @@ $html-font-size: 16px;
   font-weight: bold;
   text-transform: uppercase;
   position: relative;
-  text-shadow: 0.05em 0 0 #00fffc, -0.03em -0.04em 0 #fc00ff,
+  text-shadow:
+    0.05em 0 0 #00fffc,
+    -0.03em -0.04em 0 #fc00ff,
     0.025em 0.04em 0 #fffc00;
   animation: glitch 725ms infinite;
   transition: animation 0.1s ease-in;
@@ -152,41 +119,52 @@ $html-font-size: 16px;
 
 @keyframes glitch {
   0% {
-    text-shadow: 0.05em 0 0 #00fffc, -0.03em -0.04em 0 #fc00ff,
+    text-shadow:
+      0.05em 0 0 #00fffc,
+      -0.03em -0.04em 0 #fc00ff,
       0.025em 0.04em 0 #fffc00;
   }
   15% {
-    text-shadow: 0.05em 0 0 #00fffc, -0.03em -0.04em 0 #fc00ff,
+    text-shadow:
+      0.05em 0 0 #00fffc,
+      -0.03em -0.04em 0 #fc00ff,
       0.025em 0.04em 0 #fffc00;
   }
   30% {
-    text-shadow: -0.05em -0.025em 0 #00fffc, 0.025em 0.035em 0 #fc00ff,
+    text-shadow:
+      -0.05em -0.025em 0 #00fffc,
+      0.025em 0.035em 0 #fc00ff,
       -0.05em -0.05em 0 #fffc00;
   }
   45% {
-    text-shadow: -0.05em -0.025em 0 #00fffc, 0.025em 0.035em 0 #fc00ff,
+    text-shadow:
+      -0.05em -0.025em 0 #00fffc,
+      0.025em 0.035em 0 #fc00ff,
       -0.05em -0.05em 0 #fffc00;
   }
   70% {
-    text-shadow: 0.05em 0.035em 0 #00fffc, 0.03em 0 0 #fc00ff,
+    text-shadow:
+      0.05em 0.035em 0 #00fffc,
+      0.03em 0 0 #fc00ff,
       0 -0.04em 0 #fffc00;
   }
   85% {
-    text-shadow: 0.05em 0.035em 0 #00fffc, 0.03em 0 0 #fc00ff,
+    text-shadow:
+      0.05em 0.035em 0 #00fffc,
+      0.03em 0 0 #fc00ff,
       0 -0.04em 0 #fffc00;
   }
   100% {
-    text-shadow: -0.05em 0 0 #00fffc, -0.025em -0.04em 0 #fc00ff,
+    text-shadow:
+      -0.05em 0 0 #00fffc,
+      -0.025em -0.04em 0 #fc00ff,
       -0.04em -0.025em 0 #fffc00;
   }
 }
 
 .other-glitch {
-  color: black;
-  // font-size: 100px;
+  color: $text-primary;
   position: relative;
-  // width: 400px;
-  // margin: 0 auto;
   animation: noise-zoom 1s infinite linear alternate-reverse;
 
   &::after {
@@ -195,8 +173,8 @@ $html-font-size: 16px;
     left: 2px;
     text-shadow: -1px 0 red;
     top: 0;
-    color: black;
-    background: white;
+    color: $text-primary;
+    background: $background;
     overflow: hidden;
     clip: rect(0, 900px, 0, 0);
     animation: noise-anim 2s infinite linear alternate-reverse;
@@ -208,8 +186,8 @@ $html-font-size: 16px;
     left: -2px;
     text-shadow: 1px 0 blue;
     top: 0;
-    color: black;
-    background: white;
+    color: $text-primary;
+    background: $background;
     overflow: hidden;
     clip: rect(0, 900px, 0, 0);
     animation: noise-anim-2 3s infinite linear alternate-reverse;
@@ -253,7 +231,7 @@ $html-font-size: 16px;
 @keyframes noise-anim {
   $steps: 20;
   @for $i from 0 through $steps {
-    #{math.percentage($i*(math.div(1, $steps)))} {
+    #{math.percentage(math.div($i, $steps))} {
       clip: rect(math.random(100) + px, 9999px, math.random(100) + px, 0);
       text-shadow: (math.random(20)-10 + px)
         (math.random(20)-10 + px)
@@ -266,7 +244,7 @@ $html-font-size: 16px;
 @keyframes noise-anim-2 {
   $steps: 20;
   @for $i from 0 through $steps {
-    #{math.percentage($i*(math.div(1, $steps)))} {
+    #{math.percentage(math.div($i, $steps))} {
       clip: rect(math.random(100) + px, 9999px, math.random(100) + px, 0);
       text-shadow: (math.random(20)-10 + px)
         (math.random(20)-10 + px)
@@ -274,20 +252,4 @@ $html-font-size: 16px;
         rgba(math.random(255), math.random(255), math.random(255), 0.6);
     }
   }
-}
-
-.one {
-  background: #fff78a;
-}
-
-.two {
-  background: #ffe382;
-}
-
-.three {
-  background: #ffc47e;
-}
-
-.four {
-  background: #ffad84;
 }

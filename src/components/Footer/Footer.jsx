@@ -14,14 +14,8 @@ const Footer = () => {
       <Column lg={16} md={8} sm={4} className="footer__column">
         <Grid>
           <Column md={2} lg={4} sm={2} className="footer__nested">
-            <h3 className="footer__label">
-              <Column md={8} lg={16} sm={4} className="footer__social_title">
-                React + IBM Carbon + ❤️
-              </Column>
-              <Column md={8} lg={16} sm={4}>
-                &copy; {new Date().getFullYear()}
-              </Column>
-            </h3>
+            <p className="footer__label footer__social_title">React + IBM Carbon + ❤️</p>
+            <p className="footer__label">&copy; {new Date().getFullYear()}</p>
           </Column>
 
           <Column md={2} lg={4} sm={2} className="footer__nested">

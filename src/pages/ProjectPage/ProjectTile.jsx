@@ -4,7 +4,6 @@ import { Grid, Column, Link, Tag } from "@carbon/react";
 const ProjectTile = ({ name, description, image, live, repo, alt, tags }) => {
   return (
     <>
-      {/* <Grid className="project-tile__grid"> */}
       <Column md={8} lg={8} sm={4} className="project-tile__column">
         <Grid className="project-tile__header">
           <Column md={4} lg={4} sm={4}>
@@ -16,12 +15,12 @@ const ProjectTile = ({ name, description, image, live, repo, alt, tags }) => {
               const [[key, value] = []] = Object.entries(tag);
               return (
                 <Tag
+                  key={id}
                   className="project-tile__tag"
                   type={key}
                   size="sm"
                   title="Clear Filter"
                   id={id.toString()}
-                  //  {...args}
                 >
                   {value}
                 </Tag>
@@ -32,7 +31,9 @@ const ProjectTile = ({ name, description, image, live, repo, alt, tags }) => {
 
         <p className="project-tile__description">{description}</p>
 
-        <img className="project-tile-image" src={image} alt={alt} href={repo} />
+        <Link href={repo} target="_blank" rel="noopener noreferrer">
+          <img className="project-tile-image" src={image} alt={alt} />
+        </Link>
 
         <Grid>
           <Column md={2} lg={4} sm={2}>

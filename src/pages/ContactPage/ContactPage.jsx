@@ -1,9 +1,9 @@
-import React from "react";
+import React, { useState } from "react";
 import { Grid, Column } from "@carbon/react";
-import useFormComponent from "../../components/useFormComponent";
+import ContactForm from "../../components/ContactForm";
 
 const ContactPage = () => {
-  let { isSubmitted, render } = useFormComponent();
+  const [isSubmitted, setIsSubmitted] = useState(false);
 
   return (
     <Grid>
@@ -13,12 +13,10 @@ const ContactPage = () => {
             <p className="contact__text">
               Seen something you like? Or just wanna chat? Shoot me a message!
             </p>
-            {render}
+            <ContactForm onSubmitSuccess={() => setIsSubmitted(true)} />
           </>
         ) : (
-          <>
-            <p className="contact__success-text">Message sent successfully!</p>
-          </>
+          <p className="contact__success-text">Message sent successfully!</p>
         )}
       </Column>
     </Grid>

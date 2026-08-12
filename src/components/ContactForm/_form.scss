@@ -1,3 +1,5 @@
+@use "@carbon/react/scss/spacing" as *;
+
 .contact__form {
   max-width: 500px;
   padding: $spacing-05 0;

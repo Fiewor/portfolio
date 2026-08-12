@@ -1,21 +1,23 @@
 @use "@carbon/react/scss/spacing" as *;
 @use "@carbon/react/scss/type" as *;
+@use "@carbon/react/scss/breakpoint" as *;
 
 .contact-page__p {
   padding: $spacing-10 0;
-  margin: $spacing-13 0;
+  margin: $spacing-09 0;
+  @include breakpoint(md) {
+    margin: $spacing-11 0;
+  }
 }
 
 .contact__text {
   padding: $spacing-05 0;
 }
 
-.contact__form {
-  max-width: 500px;
-  padding: $spacing-05 0;
-}
-
 .contact__success-text {
   padding: $spacing-10 0;
-  margin: $spacing-13 0;
+  margin: $spacing-09 0;
+  @include breakpoint(md) {
+    margin: $spacing-11 0;
+  }
 }

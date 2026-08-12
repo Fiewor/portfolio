@@ -1,14 +1,14 @@
 @use "@carbon/react";
 @use "@carbon/react/scss/colors";
 @use "@carbon/react/scss/breakpoint" as *;
-// @use "../node_modules/@carbon/react/scss/breakpoint" as *;
+@use "@carbon/react/scss/spacing" as *;
 
 a {
   text-decoration: none;
 }
 
 .cds--content {
-  margin-top: 3rem;
+  margin-top: $spacing-09;
   padding: 0;
   background: var(--cds-background);
 }
@@ -16,14 +16,15 @@ a {
 .cds--content .cds--css-grid {
   max-width: 100%;
   @include breakpoint(md) {
-    padding-left: 20px;
-    padding-right: 20px;
+    padding-left: $spacing-05;
+    padding-right: $spacing-05;
   }
 }
 
-// overriding header tooltip bg color
-// because the navigation is dark themed while the content is white
-// which means the dark theme tooltip bg blends into the white content bg
+// Header shell is always g100-themed regardless of content theme.
+// Tooltip backgrounds use a fixed palette value ($gray-20) because semantic
+// tokens would resolve against the content theme, causing the tooltip to
+// blend into the light background.
 .cds--header__global .cds--popover-content {
   background-color: colors.$gray-20;
 }
