@@ -54,6 +54,11 @@
     @include breakpoint-between((320px + 1), md) {
       max-width: 75%;
     }
+
+    .cds--link {
+      font: inherit;
+      letter-spacing: inherit;
+    }
   }
 
   &__tagline {

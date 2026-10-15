@@ -33,6 +33,36 @@ import {
   teaching,
 } from "./data.js";
 
+const ExternalLink = ({ href, children }) => (
+  <CarbonLink href={href} target="_blank" rel="noopener noreferrer" inline>
+    {children}
+  </CarbonLink>
+);
+
+const renderAchievementDetails = ({
+  details,
+  link,
+  linkLabel,
+  announcement,
+}) => {
+  const [before, after] = link ? details.split(linkLabel) : [details, ""];
+  return (
+    <>
+      {before}
+      {link && <ExternalLink href={link}>{linkLabel}</ExternalLink>}
+      {after}
+      {announcement && (
+        <>
+          {" "}
+          <ExternalLink href={announcement.href}>
+            {announcement.label}
+          </ExternalLink>
+        </>
+      )}
+    </>
+  );
+};
+
 const LandingPage = () => {
   const [glitchActive, setGlitchActive] = useState(false);
 
@@ -87,8 +117,17 @@ const LandingPage = () => {
                 >
                   <h2 className="landing-page__subheading">About</h2>
                   <p className="landing-page__p">
-                    I'm an AI engineer and the founder of GradrAI, working on
-                    trustworthy AI-assisted assessment for African classrooms.
+                    I'm an AI engineer and the founder of{" "}
+                    <CarbonLink
+                      href="https://www.gradrai.com"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      inline
+                    >
+                      GradrAI
+                    </CarbonLink>
+                    , working on trustworthy AI-assisted assessment for African
+                    classrooms.
                   </p>
                   <p className="landing-page__p">
                     My work focuses on end-to-end assessment pipelines:
@@ -291,20 +330,7 @@ const LandingPage = () => {
                           <strong>{item.title}</strong>
                         </StructuredListCell>
                         <StructuredListCell>
-                          {item.details}
-                          {item.link && (
-                            <>
-                              {" "}
-                              <CarbonLink
-                                href={item.link}
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                inline
-                              >
-                                {item.linkLabel}
-                              </CarbonLink>
-                            </>
-                          )}
+                          {renderAchievementDetails(item)}
                         </StructuredListCell>
                       </StructuredListRow>
                     ))}

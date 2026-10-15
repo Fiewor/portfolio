@@ -65,23 +65,35 @@ export const achievements = [
     details:
       "One of three winners of the UNDP Nigeria and FSD Africa Innovation Challenge, for work with RapidMedicare.",
     link: "https://rapidmed.care/",
-    linkLabel: "rapidmed.care",
+    linkLabel: "RapidMedicare",
   },
   {
     title: "Google Gemini National #BuildWithAI Hackathon – 3rd Place (2024)",
     details:
       "Built the initial GradrAI MVP in three days using Google Gemini. Independently implemented the frontend in under four hours after a teammate became unavailable, and contributed the AI-driven backend component.",
+    announcement: {
+      label: "Announcement",
+      href: "https://www.linkedin.com/posts/john-fiewor-365484127_buildwithai-hackathon-ai-activity-7193176535451766784-VPqg",
+    },
   },
   {
     title: "MongoDB World Hackathon – 2nd Place (2022)",
     details:
       "Co-developed 'Good News', a web platform that surfaces positive news stories globally using the GDELT dataset. The project placed 2nd out of 600+ international participants.",
+    announcement: {
+      label: "Winners announcement",
+      href: "https://www.mongodb.com/community/forums/t/and-the-winners-are/167764",
+    },
   },
   {
     title:
       "Open Source Contributor & Demo Day Speaker @ IBM Call for Code for Racial Justice (2021–2022)",
     details:
       "Contributed to IBM’s Call for Code for Racial Justice open-source initiatives, focusing on internationalization (i18n) and accessibility (a11y) for the Truth Loop project. Also served as a Hacktoberfest Demo Day speaker.",
+    announcement: {
+      label: "Merged contributions",
+      href: "https://github.com/Call-for-Code-for-Racial-Justice/Truth-Loop/pulls?q=is%3Apr+author%3AFiewor+is%3Amerged",
+    },
   },
 ];
 
@@ -133,7 +145,7 @@ export const teaching = [
   },
   {
     role: "High School Computer Science Teacher",
-    organisation: "Apostolic Faith Secondary School",
+    organisation: "Apostolic Faith Secondary School, Port Harcourt, Nigeria",
     timeline: "01.2019 - 11.2019",
     description:
       "Taught secondary-school computer science and supported students in foundational computing concepts and practical digital skills.",
