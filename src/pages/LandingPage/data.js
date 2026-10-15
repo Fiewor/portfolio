@@ -1,36 +1,104 @@
-export const achievements = [
+export const education = [
   {
-    title: "GDG #BuildWithAI Hackathon – 3rd Place Winner",
-    details:
-      "Led the rapid development of the initial MVP for GradrAI using Google Gemini during the national #BuildWithAI Hackathon. Built the entire frontend in under four hours and implemented the AI-driven backend, securing 3rd place.",
+    degree: "M.Sc. Computer Science and Technology",
+    institution: "Crawford University, Igbesa, Nigeria",
+    period: "01.2021 - 10.2022",
+    grade: "GPA 4.18 / 5.00",
   },
   {
-    title: "MongoDB World Hackathon – 2nd Place Winner",
-    details:
-      "Co-developed 'Good News', a web application that surfaces positive news stories globally using the GDELT dataset. The project placed 2nd out of 600+ international participants.",
-  },
-  {
-    title: "Open Source Contributor & Demo Day Speaker @ IBM Call for Code for Racial Justice",
-    details:
-      "Contributor to IBM’s Call for Code for Racial Justice open-source initiatives, with a focus on internationalization (i18n) and accessibility (a11y) for the Truth Loop project. Also served as a Demo Day speaker during Hacktoberfest.",
+    degree: "B.Sc. Computer Science and Technology",
+    institution: "Crawford University, Igbesa, Nigeria",
+    period: "11.2014 - 07.2018",
+    grade: "Second Class Honours (Upper Division), GPA 4.26 / 5.00",
   },
 ];
 
+export const researchInterests = [
+  "Artificial Intelligence in Education (AIEd)",
+  "AI-assisted grading and feedback",
+  "Teacher-in-the-loop and human-in-the-loop assessment systems",
+  "Multilingual and code-switched educational NLP/ASR for African classrooms",
+  "Multi-agent safety, validation, and auditability in grading pipelines",
+  "Psychometrics, grading validity, and responsible educational AI",
+];
+
+export const publications = [
+  {
+    title:
+      "Teacher-in-the-Loop AI Assessment for African Classrooms: Paper-Based Grading, Offline Exams, and Code-Switched Oral Verification",
+    authors: "J. O. Fiewor (sole author)",
+    venue: "Accepted, NeurIPS 2026 Workshop on Global South AI (23 Sept 2026)",
+    summary:
+      "A 60-script shadow-mode study of paper-based grading under teacher review, a code-switched speech-recognition comparison on consented classroom recordings (English with Nigerian Pidgin, Yoruba, Swahili, and isiZulu) plus a 30-clip African benchmark, and an offline path for exam generation and essay grading on teacher hardware. Language-hypothesis routing reduced mean WER from 0.63 to 0.15 and the downstream score gap from 2.9 to 1.3 marks out of 10.",
+    link: "https://openreview.net/forum?id=IlKAI77Iwm",
+    linkLabel: "OpenReview (public release pending)",
+  },
+];
+
+export const researchArtifacts = [
+  {
+    name: "Intro Python paper-assessment scripts",
+    type: "Dataset",
+    description:
+      "De-identified handwritten exam scripts, lecturer reference scores, and reproduction code for the shadow-mode grading study.",
+    link: "https://huggingface.co/datasets/fiewor/intro-python-paper-assessment-scripts",
+  },
+  {
+    name: "GradrAI Viva code-switched speech benchmark",
+    type: "Dataset",
+    description:
+      "Consented classroom recordings of code-switched student explanations used to evaluate speech recognition for oral assessment.",
+    link: "https://huggingface.co/datasets/fiewor/gradrai-viva-codeswitch-benchmark",
+  },
+  {
+    name: "Offline AI assessment on consumer hardware",
+    type: "Technical write-up",
+    description:
+      "How GradrAI runs exam generation and grading fully offline with Gemma 4 for low-connectivity classrooms.",
+    link: "https://dev.to/fiewor/how-gemma-4-helped-us-cut-the-last-wire-keeping-ai-out-of-african-classrooms-315i",
+  },
+];
+
+export const achievements = [
+  {
+    title: "UNDP Nigeria & FSD Africa Innovation Challenge – Winner (2025)",
+    details:
+      "One of three winners of the UNDP Nigeria and FSD Africa Innovation Challenge, for work with RapidMedicare.",
+    link: "https://rapidmed.care/",
+    linkLabel: "rapidmed.care",
+  },
+  {
+    title: "Google Gemini National #BuildWithAI Hackathon – 3rd Place (2024)",
+    details:
+      "Built the initial GradrAI MVP in three days using Google Gemini. Independently implemented the frontend in under four hours after a teammate became unavailable, and contributed the AI-driven backend component.",
+  },
+  {
+    title: "MongoDB World Hackathon – 2nd Place (2022)",
+    details:
+      "Co-developed 'Good News', a web platform that surfaces positive news stories globally using the GDELT dataset. The project placed 2nd out of 600+ international participants.",
+  },
+  {
+    title:
+      "Open Source Contributor & Demo Day Speaker @ IBM Call for Code for Racial Justice (2021–2022)",
+    details:
+      "Contributed to IBM’s Call for Code for Racial Justice open-source initiatives, focusing on internationalization (i18n) and accessibility (a11y) for the Truth Loop project. Also served as a Hacktoberfest Demo Day speaker.",
+  },
+];
 
 export const experience = [
   {
-    role: "Founder & Lead Engineer",
+    role: "Founder & Lead AI Engineer",
     company: "GradrAI",
-    timeline: "11.2023 - Present",
+    timeline: "11.2024 - Present",
     description:
-      "Founded and built GradrAI, an end-to-end AI-powered platform for automating the grading of paper-based tests and examinations. Architected the full system from OCR-based pipelines to an LLM-driven grading engine using Google Gemini on Vertex AI. Currently evolving the platform into an agentic, multi-agent grading system with autonomous planning, validation, aggregation, and feedback generation.",
+      "Founded and lead GradrAI, an end-to-end AI assessment platform for paper-based exams, computer-based tests, and AI-driven mock tests. Evolved the grading engine from an Azure OCR and keyword pipeline to an LLM-driven system on Google Gemini and Vertex AI, then shipped it as a multi-agent system built with Google ADK and deployed on Vertex AI Agent Engine. Its pipelines chain specialised agents for preprocessing, rubric-based grading, referee cross-checking that routes low-confidence results to teacher review, weakness detection, personalised practice generation, and result aggregation, with MCP tools for database and storage access. Ran shadow-mode evaluations on 60 paper-based scripts, built code-switched oral-verification experiments, and delivered an offline CBT pipeline that runs on an on-device model for low-connectivity classrooms.",
   },
   {
     role: "Full-Stack Developer",
     company: "VerifyEd",
     timeline: "02.2025 - Present",
     description:
-      "Worked on client and admin dashboards for a blockchain-based digital credentialing platform. Implemented features such as landscape-optimized certificate downloads and one-click LinkedIn sharing, improved SSR for better SEO and link previews, and designed scripts to recover unused XRP from dormant wallets, saving the company over $1,000.",
+      "Build and maintain issuer-facing and recipient-facing systems for a digital credentialing platform that issues and verifies educational credentials. Shipped landscape-optimised certificate downloads and one-click LinkedIn sharing, improved server-side rendering for reliable crawling and link previews, resolved verification incidents caused by XRPL ledger congestion, and designed a script to recover unused XRP from dormant wallets, saving the company over $1,000.",
   },
   {
     role: "Full-Stack Developer",
@@ -55,9 +123,44 @@ export const experience = [
   },
 ];
 
-
+export const teaching = [
+  {
+    role: "Google Cloud Platform Mentor",
+    organisation: "Google Africa Developer Scholarship",
+    timeline: "06.2021 - 12.2021",
+    description:
+      "Mentored learners working through Google Cloud Platform content and practical cloud-computing exercises.",
+  },
+  {
+    role: "High School Computer Science Teacher",
+    organisation: "Apostolic Faith Secondary School",
+    timeline: "01.2019 - 11.2019",
+    description:
+      "Taught secondary-school computer science and supported students in foundational computing concepts and practical digital skills.",
+  },
+];
 
 export const certificates = [
+  {
+    name: "5-Day AI Agents Intensive Course with Google",
+    issuer: "Kaggle & Google",
+    date: "2025",
+  },
+  {
+    name: "Qiskit Fall Fest 2025 (Participation)",
+    issuer: "IBM Quantum",
+    date: "2025",
+  },
+  {
+    name: "Python Coder",
+    issuer: "Kaggle",
+    date: "2025 - Present",
+  },
+  {
+    name: "Problem Solving (Basic)",
+    issuer: "HackerRank",
+    date: "2025 - Present",
+  },
   {
     name: "Machine Learning Specialization",
     issuer: "DeepLearning.AI & Stanford University",
@@ -89,4 +192,3 @@ export const certificates = [
     date: "2020 - Present",
   },
 ];
-

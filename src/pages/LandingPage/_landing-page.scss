@@ -1,5 +1,4 @@
 @use "@carbon/react/scss/spacing" as *;
-@use "sass:math";
 @use "@carbon/react/scss/type" as *;
 @use "@carbon/react/scss/breakpoint" as *;
 @use "@carbon/react/scss/theme" as *;
@@ -57,8 +56,45 @@
     }
   }
 
-  &__p__span {
-    @include type-style("productive-heading-04");
+  &__tagline {
+    @include type-style("productive-heading-02");
+    color: $text-secondary;
+    margin-top: $spacing-03;
+  }
+
+  &__section-title {
+    @include type-style("productive-heading-03");
+    margin-top: $spacing-09;
+    margin-bottom: $spacing-05;
+
+    &:first-child {
+      margin-top: 0;
+    }
+  }
+
+  &__interests {
+    @include type-style("body-01");
+  }
+
+  &__publication {
+    padding: $spacing-05;
+    background-color: $layer-01;
+    border-left: $spacing-02 solid $border-interactive;
+  }
+
+  &__publication-title {
+    @include type-style("productive-heading-02");
+  }
+
+  &__publication-meta {
+    @include type-style("label-01");
+    color: $text-secondary;
+    margin: $spacing-03 0;
+  }
+
+  &__publication-summary {
+    @include type-style("body-01");
+    margin-bottom: $spacing-04;
   }
 
   &__span {
@@ -81,9 +117,6 @@
 }
 
 .glitch {
-  font-size: 2rem;
-  font-weight: bold;
-  text-transform: uppercase;
   position: relative;
   text-shadow:
     0.05em 0 0 #00fffc,
@@ -118,36 +151,21 @@
 }
 
 @keyframes glitch {
-  0% {
-    text-shadow:
-      0.05em 0 0 #00fffc,
-      -0.03em -0.04em 0 #fc00ff,
-      0.025em 0.04em 0 #fffc00;
-  }
+  0%,
   15% {
     text-shadow:
       0.05em 0 0 #00fffc,
       -0.03em -0.04em 0 #fc00ff,
       0.025em 0.04em 0 #fffc00;
   }
-  30% {
-    text-shadow:
-      -0.05em -0.025em 0 #00fffc,
-      0.025em 0.035em 0 #fc00ff,
-      -0.05em -0.05em 0 #fffc00;
-  }
+  30%,
   45% {
     text-shadow:
       -0.05em -0.025em 0 #00fffc,
       0.025em 0.035em 0 #fc00ff,
       -0.05em -0.05em 0 #fffc00;
   }
-  70% {
-    text-shadow:
-      0.05em 0.035em 0 #00fffc,
-      0.03em 0 0 #fc00ff,
-      0 -0.04em 0 #fffc00;
-  }
+  70%,
   85% {
     text-shadow:
       0.05em 0.035em 0 #00fffc,
@@ -159,97 +177,5 @@
       -0.05em 0 0 #00fffc,
       -0.025em -0.04em 0 #fc00ff,
       -0.04em -0.025em 0 #fffc00;
-  }
-}
-
-.other-glitch {
-  color: $text-primary;
-  position: relative;
-  animation: noise-zoom 1s infinite linear alternate-reverse;
-
-  &::after {
-    content: attr(data-text);
-    position: absolute;
-    left: 2px;
-    text-shadow: -1px 0 red;
-    top: 0;
-    color: $text-primary;
-    background: $background;
-    overflow: hidden;
-    clip: rect(0, 900px, 0, 0);
-    animation: noise-anim 2s infinite linear alternate-reverse;
-  }
-
-  &::before {
-    content: attr(data-text);
-    position: absolute;
-    left: -2px;
-    text-shadow: 1px 0 blue;
-    top: 0;
-    color: $text-primary;
-    background: $background;
-    overflow: hidden;
-    clip: rect(0, 900px, 0, 0);
-    animation: noise-anim-2 3s infinite linear alternate-reverse;
-  }
-}
-
-@keyframes noise-zoom {
-  0% {
-    transform: scale(1 - math.div(math.random(10), 100));
-  }
-  10% {
-    transform: scale(1 - math.div(math.random(3), 100));
-  }
-  20% {
-    transform: scale(1 - math.div(math.random(3), 100)) skew(-(math.random(10)-5) + deg, 0);
-  }
-  30% {
-    transform: scale(1 - math.div(math.random(3), 100));
-  }
-  40% {
-    transform: scale(1 - math.div(math.random(3), 100));
-  }
-  50% {
-    transform: scale(1 - math.div(math.random(3), 100));
-  }
-  60% {
-    transform: scale(1 - math.div(math.random(3), 100));
-  }
-  70% {
-    transform: scale(1 - math.div(math.random(3), 100));
-  }
-  80% {
-    transform: scale(1 - math.div(math.random(3), 100));
-    transform: scale(1 - math.div(math.random(3), 100)) skew(-(math.random(10)) + deg, 0);
-  }
-  90% {
-    transform: scale(1 - math.div(math.random(3), 100));
-  }
-}
-
-@keyframes noise-anim {
-  $steps: 20;
-  @for $i from 0 through $steps {
-    #{math.percentage(math.div($i, $steps))} {
-      clip: rect(math.random(100) + px, 9999px, math.random(100) + px, 0);
-      text-shadow: (math.random(20)-10 + px)
-        (math.random(20)-10 + px)
-        (math.random(40) + px)
-        rgba(255, 255, 255, 0.8);
-    }
-  }
-}
-
-@keyframes noise-anim-2 {
-  $steps: 20;
-  @for $i from 0 through $steps {
-    #{math.percentage(math.div($i, $steps))} {
-      clip: rect(math.random(100) + px, 9999px, math.random(100) + px, 0);
-      text-shadow: (math.random(20)-10 + px)
-        (math.random(20)-10 + px)
-        (math.random(40) + px)
-        rgba(math.random(255), math.random(255), math.random(255), 0.6);
-    }
   }
 }
